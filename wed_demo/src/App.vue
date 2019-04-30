@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <headerComponent></headerComponent>
-    <navComponent></navComponent>
     <router-view></router-view>
     <footerComponent></footerComponent>
   </div>
@@ -9,7 +8,6 @@
 
 <script>
 import headerComponent from './components/headerComponent'
-import navComponent from './components/navComponent'
 import footerComponent from './components/footerComponent'
 // import { initUser } from './service/dataProcessing'
 export default {
@@ -21,7 +19,6 @@ export default {
   },
   components: {
     headerComponent,
-    navComponent,
     footerComponent
   },
 
@@ -45,7 +42,7 @@ export default {
 
   mounted: function() {
     // 指定初始路由
-    this.$router.push('/findMusicComponent');
+    this.$router.push('/homePageComponent');
     // this.initUser();
   }
 }
@@ -63,10 +60,15 @@ body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, sectio
   padding: 0;
   margin: 0;
 }
+
+
 #app {
   width: 100%;
   min-width: 1120px;
   height: auto;
+  /* width: 100%;
+  min-width: 1120px;
+  height: 100%; */
   /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

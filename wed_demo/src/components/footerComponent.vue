@@ -4,15 +4,15 @@
         <div class="footer_text">
             <div class="copy">
                 <p>
-                    <a href="//music.163.com/about" target="_blank" class="copy_text">关于网易</a><span class="line">|</span>
-                    <a href="//help.mail.163.com/service.html" target="_blank" class="copy_text">客户服务</a><span class="line">|</span>
-                    <a href="//music.163.com/html/web2/service.html" target="_blank" class="copy_text">服务条款</a><span class="line">|</span>
-                    <a href="//sitemap.163.com/" target="_blank" class="copy_text">网站导航</a><span class="line">|</span>
+                    <a href="" target="_blank" class="copy_text">关于我们</a><span class="line">|</span>
+                    <a href="" target="_blank" class="copy_text">客户服务</a><span class="line">|</span>
+                    <a href="" target="_blank" class="copy_text">服务条款</a><span class="line">|</span>
+                    <a href="" target="_blank" class="copy_text">网站导航</a><span class="line">|</span>
                     <a href="#" class="copy_text">意见反馈</a>
                 </p>
                 <p class="copy_text2">
-                    <span class="copy_right">网易公司版权所有©1997-2019</span><span>杭州乐读科技有限公司运营：</span>
-                    <a href="http://p1.music.126.net/03WF0APmm-J0TqdbOc8-XQ==/109951163649544962.png" target="_blank" class="alink copy_text2">浙网文[2018]3506-263号</a>
+                    <span class="copy_right">PcbVr团队版权所有©2018-2028</span><span>武汉理工大学PcbVr团队运营：</span>
+                    <a href="http://p1.music.126.net/03WF0APmm-J0TqdbOc8-XQ==/109951163649544962.png" target="_blank" class="alink copy_text2">鄂网文[2018]3506-263号</a>
                 </p>
                 <p class="copy_text2">
                     <span class="copy_right">违法和不良信息举报电话：0571-89853516</span>
@@ -41,21 +41,9 @@
         </div>
     </div>
     <a title="回到顶部" class="box" id="box"  hidefocus="true" >回到顶部</a>
-    <!-- <div class="selfResume">
-        <ul>
-            <li><span>地址：</span><span v-text="selfResume.address"></span></li>
-            <li><span>姓名：</span><span v-text="selfResume.name"></span></li>
-            <li><span>职业：</span><span v-text="selfResume.job"></span></li>
-            <li><span>联系方式：</span><span v-text="selfResume.link"></span></li>
-        </ul>
-    </div>
-    <div class="blogLink">
-      <img src="../assets/image/wchat.jpg" alt="" height="100">
-    </div> -->
   </div>
 </template>
 <script>
-    
     export default {
         name: 'footerComponent',
         data () {
@@ -135,7 +123,7 @@ a:hover{
     text-decoration: underline;
 }
 .footerComponent{
-    position: relative; 
+    /* position: relative;  */
     height: 148px;
     overflow: hidden;
     border-top: 1px solid #d3d3d3;
@@ -146,6 +134,7 @@ a:hover{
     height: 91px;
     margin: 0 auto;
 }
+
 .footer_text{
     font-size: 12px;
     height: 91px;
@@ -233,7 +222,7 @@ a:hover{
     position: fixed;
     text-indent: -9999px;
     left: 50%;
-    margin-left: 500px;
+    margin-left: 600px;
     bottom: 160px;
     width: 49px;
     height: 44px;

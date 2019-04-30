@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h1>下载客户端</h1>  
+        <h1>资讯</h1>  
     </div> 
 </template>
 <script>

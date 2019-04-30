@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h1>朋友</h1>  
+        <h1>关于</h1>  
     </div> 
 </template>
 <script>

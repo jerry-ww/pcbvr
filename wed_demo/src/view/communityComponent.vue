@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <h1>音乐人</h1>  
+        <h1>社区</h1>  
     </div> 
 </template>
 <script>

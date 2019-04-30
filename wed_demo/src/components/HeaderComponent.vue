@@ -2,20 +2,20 @@
   <div class="headerComponent">
     <div class="h-controller"> 
           <a href="#/findMusicComponent" class="h-logo">
-            <!-- 网易云音乐 -->
+            PcbVR
           </a>
           <div class="h-tab">
               <ul>
-                  <router-link to="/findMusicComponent"><li v-bind:class="{ active: layout.changeColor[0] }" @click="changeBgcEvent(0)"><span><a href="">发现音乐</a></span></li></router-link>
-                  <router-link to="/myMusicComponent">  <li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span><a href="">我的音乐</a></span></li></router-link>
-                  <router-link to="/friendComponent">   <li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span><a href="">朋友</a></span></li></router-link>
-                  <router-link to="/musicShopComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span><a href="">商城</a></span></li></router-link>
-                  <router-link to="/musicManComponent"> <li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span><a href="">音乐人</a></span></li></router-link>   
-                  <router-link to="/downLoadComponent"> <li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span><a href="">下载客户端</a></span></li></router-link>   
+                  <router-link to="/homePageComponent"><li v-bind:class="{ active: layout.changeColor[0] }" @click="changeBgcEvent(0)"><span><a href="">首页</a></span></li></router-link>
+                  <router-link to="/showcaseComponent">  <li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span><a href="">模型</a></span></li></router-link>
+                  <router-link to="/communityComponent">   <li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span><a href="">社区</a></span></li></router-link>
+                  <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span><a href="">资讯</a></span></li></router-link>
+                  <router-link to="/aboutComponent"> <li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span><a href="">关于我们</a></span></li></router-link>   
+                  <!--<router-link to="/downLoadComponent"> <li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span><a href="">下载客户端</a></span></li></router-link>   -->
               </ul>
           </div>
           <div class="h-search">
-              <input type="text" placeholder="音乐/视频/电台/用户">
+              <input type="text" placeholder="校园/景点/车站">
           </div>
           <!-- <div class="h-author"> -->
           <a class="h-author">创作者中心</a>
@@ -104,17 +104,11 @@ a {
     margin: 0 auto;
 }
 .h-controller .h-logo{
-    /* float: left;
-    
+    float: left;
+    padding-right: 30px;
     font-size: 1.5rem;
     font-weight: 600;
-    color: #fff; */
-    background: url(../assets/logo.png) no-repeat;
-    float: left;
-    width: 176px;
-    height: 69px;
-    background-size: 90%;
-    background-position: 0 14px;
+    color: #fff;
 }
 .h-controller .h-tab{
     float: left;
@@ -146,11 +140,9 @@ a {
     width: 100%;
 }
 .h-controller .h-tab a{
-    font-size: 14px;
+    font-size: .9rem;
     color: #ccc;
 }
-
-
 .h-controller .h-search{
     position: relative;
     float: left;

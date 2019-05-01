@@ -94,7 +94,7 @@ a {
 .headerComponent{
     width: 100%;
     height: 70px;
-    background-color: #242424;
+    background-color: #42626d;
 }
 .h-controller{
     width: 50%;
@@ -130,10 +130,13 @@ a {
     color: #ccc;
 }
 .h-controller .h-tab li:hover{
-    background-color: #000;
+     /* background-color: #000; */
+    background-color:  #6797a5;
 }
 .h-controller .h-tab li.active{
-    background-color: #000;
+    /* background-color: #000; */
+    background-color:  #6797a5;
+   
 }
 .h-controller .h-tab span{
     display: inline-block;

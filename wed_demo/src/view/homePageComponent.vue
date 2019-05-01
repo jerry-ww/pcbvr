@@ -254,7 +254,7 @@
                                         <a class="tit s-fc0" href="" >新一教学楼</a>
                                     </p>
                                 </li>
-                                <li >
+                                 <li >
                                     <div class="u-cover u-cover-1">
                                         <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
                                         <a  href="" class="msk" ></a>
@@ -288,22 +288,26 @@ import carousel from '../components/Carousel'
                         src:'http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg',
                         title:'南湖图书馆', 
                         url:'http://101.132.40.201:8080/Myhouse1/pageName.html',
-                        bgColor: '#487e42'
+                        // bgColor: '#487e42'
+                        bgColor: '#6797a5'
                     },
                     {
                         src:'http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg',
                         title:'新一教学楼',
-                        bgColor:'#c1d6f9'
+                        // bgColor:'#c1d6f9'
+                         bgColor: '#6797a5'
                     },
                     {
                         src:'http://101.132.40.201:8080/Myhouse1/picture/%E9%A3%9E%E9%A9%AC.jpg',
                         title:'飞马广场',
-                        bgColor:'#e7be8c'
+                        // bgColor:'#e7be8c'
+                         bgColor: '#6797a5'
                     },
                     {
                         src:'http://101.132.40.201:8080/Myhouse1/picture/%E6%80%9D%E6%BA%90%E5%B9%BF%E5%9C%BA.jpg',
                         title:'思源广场',
-                        bgColor:'#d3d6db'
+                        // bgColor:'#d3d6db'
+                         bgColor: '#6797a5'
                     }
                     
                 ]
@@ -361,7 +365,7 @@ a{
     height: 33px;
     padding: 0px 10px 0px 34px;
     background-position: -225px -156px;
-    border-bottom: 2px solid rgb(193, 13, 12);
+    /* border-bottom: 2px solid #fdbfb2; */
 }
 .tit{
     float: left;

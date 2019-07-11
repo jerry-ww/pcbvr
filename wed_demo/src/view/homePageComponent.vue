@@ -273,12 +273,14 @@
                         
                     </div>
                 </div>
+
         </div>
   </div> 
 </template>
 <script>
 // import {findMusic} from '../service/dataProcessing'
 import carousel from '../components/Carousel'
+import ElementUI from 'element-ui'
     export default {
         data () {
             return {

@@ -1,3 +1,4 @@
+var webpack=require('webpack')// 引入jq
 'use strict'
 const path = require('path')
 const utils = require('./utils')
@@ -31,6 +32,14 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  // 引入jq
+  plugins: [ 
+    new webpack.ProvidePlugin({ 
+          $:"jquery", 
+          jQuery:"jquery", 
+         "windows.jQuery":"jquery"
+    }) 
+  ], 
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {

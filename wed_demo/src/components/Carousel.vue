@@ -162,7 +162,7 @@ export default {
 
 .arrow{
   position: absolute;
-  top: 130px;
+  top: 200px;
   font-size: 3em;
   color: #ccc;
   opacity: .6;

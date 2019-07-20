@@ -35,38 +35,63 @@
           </div>
       </div>
       <div class="login_pop" style="display: none">
-      <div class="graybox" ></div>
-        <div class="popbox">
-            <div class="poptop">
-                <h3>登录</h3>
-                <a href="#" class="close" @click="close_logpop()">x</a>
-            </div>
-            <div class="popcon">
-                <div>
-                    <div class="group">
-                        <input type="text" id="user_num" value="请输入邮箱" onFocus="if(value=='请输入邮箱') {value=''}" onBlur="if(value==''){value='请输入邮箱'}">
-                        <i class="fa fa-user"></i>
+        <div class="graybox" ></div>
+            <div class="popbox">
+                <div class="poptop">
+                    <h3>登录</h3>
+                    <a href="#" class="close" @click="close_logpop()">x</a>
+                </div>
+                <div class="popcon">
+                    <div>
+                        <div class="group">
+                            <input type="text" id="user_num" value="请输入邮箱" onFocus="if(value=='请输入邮箱') {value=''}" onBlur="if(value==''){value='请输入邮箱'}">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="group">
+                            <input type="text" id="pwd" value="请输入密码" onFocus="if(value=='请输入密码') {value=''}" onBlur="if(value==''){value='请输入密码'}">
+                            <i class="fa fa-lock"></i>
+                        </div>
                     </div>
-                    <div class="group">
-                        <input type="text" id="pwd" value="请输入密码" onFocus="if(value=='请输入密码') {value=''}" onBlur="if(value==''){value='请输入密码'}">
-                        <i class="fa fa-lock"></i>
+                    <div class="remember clearfix">
+                        <div class="remember-con">
+                            <input type="checkbox" id="input1" class="inputbox">
+                            <label for="input1">记住密码</label>
+                        </div>
+                        <div class="remember-con">
+                        <a href="#" class="code" @click="show_registerpop()"><i class="fa fa-question-circle"></i>注册账号</a>
+                        <a href="#" class="code"><i class="fa fa-question-circle"></i>忘记密码</a>
+                        </div>
                     </div>
                 </div>
-                <div class="remember clearfix">
-                    <div class="remember-con">
-                        <input type="checkbox" id="input1" class="inputbox">
-                        <label for="input1">记住密码</label>
-                    </div>
-                    <div class="remember-con">
-                      <a href="#" class="code"><i class="fa fa-question-circle"></i>注册账号</a>
-                      <a href="#" class="code"><i class="fa fa-question-circle"></i>忘记密码</a>
+                <div class="divbtn clearfix">
+                    <a href="#" class="btn" id="cancel" @click="close_logpop()" >取消</a>
+                    <a href="#" class="btn ok" @click="login()">登陆</a>
+                </div>
+        </div>
+      </div>
+      <div class="register_pop" style="display: none">
+        <div class="graybox" ></div>
+            <div class="popbox">
+                <div class="poptop">
+                    <h3>注册</h3>
+                    <a href="#" class="close" @click="close_registerpop()">x</a>
+                </div>
+                <div class="popcon">
+                    <div>
+                        <div class="group">
+                            <input type="text" id="user_num" value="请输入邮箱" onFocus="if(value=='请输入邮箱') {value=''}" onBlur="if(value==''){value='请输入邮箱'}">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="group">
+                            <input type="text" id="pwd" value="请输入密码" onFocus="if(value=='请输入密码') {value=''}" onBlur="if(value==''){value='请输入密码'}">
+                            <i class="fa fa-lock"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="divbtn clearfix">
-                <a href="#" class="btn" id="cancel" @click="close_logpop()" >取消</a>
-                <a href="#" class="btn ok" @click="login()">登陆</a>
-            </div>
+                <div class="divbtn clearfix">
+                    <a href="#" class="btn" id="cancel" @click="close_registerpop()" >取消</a>
+                    <a href="#" class="btn ok" @click="register()">注册</a>
+                </div>
         </div>
       </div>
   </div>
@@ -104,30 +129,64 @@ export default {
         $('.login_pop').hide();
     },
     login(){
-      var user_num = $("#user_num").val();
-      var pwd = $("#pwd").val();
-      if(user_num=="请输入邮箱"||pwd=="请输入密码"){
-        alert("请输入账号密码");
-      }else{
-        $.ajax({
-            url: "",//填一下登录接口就好了
-            type: "post",    // 提交方式
-            data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
-            dataType: "json",    // 服务器端返回的数据类型
-            success: function (data) {    
-                //console.log(data);
-                if (data.code == 200) {
-                    close_logpop();
-                    alert("登录成功");
-                }
-                else{
-                    alert("登录失败");
-                }
-              },
-          });
+        var user_num = $("#user_num").val();
+        var pwd = $("#pwd").val();
+        if(user_num=="请输入邮箱"||pwd=="请输入密码"){
+          alert("请输入账号密码");
+        }else{
+            $.ajax({
+                url: "http://101.132.40.201:8080/Myhouse1/demo/login.php",//填一下登录接口就好了
+                type: "post",    // 提交方式
+                data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
+                dataType: "json",    // 服务器端返回的数据类型
+                success: function (data) {    
+                    //console.log(data);
+                    if (data.code == 200) {
+                        close_logpop();
+                        alert("登录成功");
+                        close_logpop();
+                    }
+                    else{
+                        alert("登录失败");
+                    }
+                },
+            });
         }
-      }
-      
+    },
+    // 注册窗口弹出
+    show_registerpop(){
+        $('.login_pop').hide();
+        $('.register_pop').show(); 
+    },
+    // 注册窗口消失
+    close_registerpop(){
+        $('.register_pop').hide();
+    },
+    register(){
+        var user_num = $("#user_num").val();
+        var pwd = $("#pwd").val();
+        if(user_num=="请输入邮箱"||pwd=="请输入密码"){
+          alert("请输入账号密码");
+        }else{
+            $.ajax({
+                url: "http://101.132.40.201:8080/Myhouse1/demo/login.php",//填一下登录接口就好了
+                type: "post",    // 提交方式
+                data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
+                dataType: "json",    // 服务器端返回的数据类型
+                success: function (data) {    
+                    //console.log(data);
+                    if (data.code == 200) {
+                        close_logpop();
+                        alert("注册成功");
+                        close_logpop();
+                    }
+                    else{
+                        alert("注册失败");
+                    }
+                },
+            });
+        }
+    }
   }
 }
 </script>

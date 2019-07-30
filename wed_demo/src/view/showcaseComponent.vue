@@ -1,596 +1,268 @@
 <template>
   <div class="showcaseComponent" id="showcase">
-    <div class="g-bd" id="m-disc-pl-c">
-      <div class="g-wrap p-pl f-pr">
-        <div class="u-title f-cb">
-          <h3>
-            <span class="f-ff2 d-flag">全部</span>
-            <a href="javascript:;" class="u-btn2 u-btn2-1 menu d-flag" id="cateToggleLink">
-              <i>
-                选择分类
-                <em class="u-icn u-icn-38"></em>
-              </i>
-            </a>
-          </h3>
-          <div class="u-btn f-fr u-btn-hot d-flag">
-            <a href="/discover/playlist/?order=hot" class="a1" data-order="hot">热门</a>
-            <a href="/discover/playlist/?order=new" class="a2" data-order="new">最新</a>
-          </div>
-        </div>
-        <ul class="m-cvrlst f-cb" id="m-pl-container">
-          <li>
-            <div class="u-cover u-cover-1">
-              <img
-                class="j-flag"
-                src="http://p1.music.126.net/6ho-MTSaBCz8X7M-Eq1dQw==/109951163971353073.jpg?param=140y140"
-              >
-              <a title="趁时光还未老，去见你想见的人吧" href="/playlist?id=2729966026" class="msk"></a>
-              <div class="bottom">
-                <a
-                  class="icon-play f-fr"
-                  title="播放"
-                  href="javascript:;"
-                  data-res-type="13"
-                  data-res-id="2729966026"
-                  data-res-action="play"
-                ></a>
-                <span class="icon-headset"></span>
-                <span class="nb">30万</span>
+      <div class="products-yemian">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3 col-sm-4 products-leul">
+                  <h3>马克森厨卫产品列表</h3>
+                  <ul class="tarr">
+                      <li class="products-leli"><a class="Js-prod-a1">全部产品</a></li>
+                      <li><a>榻榻米</a></li>
+                      <li><a>卧房</a></li>
+                      <li><a>客厅</a></li>
+                      <li><a>餐厅</a></li>
+                      <li><a>书房</a></li>
+                      <li><a>儿童房</a></li>
+                  </ul>
+                  <ul>
+                      <li class="products-leli"><a href="#" class="Js-prod-a1">橱柜</a></li>
+                      <li><a href="">欧式</a></li>
+                      <li><a href="">现代简约</a></li>
+                      <li><a href="">新中式</a></li>
+                      <li><a href="">地中海</a></li>
+                      <li><a href="">台下盆</a></li>
+                      <li><a href="">新实用</a></li>
+                      <li><a href="">水箱</a></li>
+
+                  </ul>
+                  <ul>
+                      <li class="products-leli"><a href="#" class="Js-prod-a1">地板</a></li>
+                      <li><a href="">田园之美</a></li>
+                      <li><a href="">同步对纹</a></li>
+                      <li><a href="">雅致系列</a></li>
+                      <li><a href="">新品多层实木</a></li>
+                      <li><a href="">精品实木</a></li>
+                      <li><a href="">润木系列</a></li>
+                      <li><a href="">枫丹白露系列</a></li>
+                      <li><a href="">碧丽丝</a></li>
+                      <li><a href="">心境如兰</a></li>
+                      <li><a href="">晶莹系列</a></li>
+
+                  </ul>
+
               </div>
-            </div>
-            <p class="dec">
-              <a
-                title="趁时光还未老，去见你想见的人吧"
-                href="/playlist?id=2729966026"
-                class="tit f-thide s-fc0"
-              >趁时光还未老，去见你想见的人吧</a>
-            </p>
-            <p>
-              <span class="s-fc4">by</span>
-              <a
-                title="YouTube视频推荐"
-                href="/user/home?id=7394345"
-                class="nm nm-icn f-thide s-fc3"
-              >YouTube视频推荐</a>
-              <sup class="u-icn u-icn-84"></sup>
-            </p>
-          </li>
-          <li>
-            <div class="u-cover u-cover-1">
-              <img
-                class="j-flag"
-                src="http://p2.music.126.net/_Ikq-lUDulVaF-90Uo6iUA==/109951163777840285.jpg?param=140y140"
-              >
-              <a title="致敬老男孩｜怎么会迷上你，我在问自己" href="/playlist?id=2607570464" class="msk"></a>
-              <div class="bottom">
-                <a
-                  class="icon-play f-fr"
-                  title="播放"
-                  href="javascript:;"
-                  data-res-type="13"
-                  data-res-id="2607570464"
-                  data-res-action="play"
-                ></a>
-                <span class="icon-headset"></span>
-                <span class="nb">176万</span>
+              <div class="col-md-9">
+                  <!--箭牌卫浴-->
+                  <div class="row">
+                      <div class="col-md-4 col-sm-4">
+                          <a href="xiangqing/matong.html" class="products-border"><img src="img/products/chanqin1.jpg"
+                                                                                      alt=""></a>
+                          <strong>衣帽柜</strong>
+                          <p>现代简约系列 </p>
+                          <p>
+                              <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                                class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="xiangqing/yvgang.html" class="products-border"><img src="img/products/chanqin2.jpg"
+                                                                                      alt=""></a>
+                          <strong>现代简约 </strong>
+                          <p>玩色系列</p>
+                          <p><a href="https://shop68294732.taobao.com/category-380395410.htm?spm=a1z10.1-c.w4010-
+  12344195253.10.jpN6qf&search=y&parentCatId=380395408&parentCatName=%B7%A8%B1%EA%BD%E0%BE
+  %DF&catName=%D4%A1%B8%D7#bd" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin3.jpg" alt=""></a>
+                          <strong>
+                              现代简约 
+                          </strong>
+                          <p>优格系列</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin4.jpg" alt=""></a>
+                          <strong>
+                              现代简约 
+                          </strong>
+                          <p>优格系列-A</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin5.jpg" alt=""></a>
+                          <strong>现代简约 </strong>
+                          <p>温情系列</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin6.jpg" alt=""></a>
+                          <strong>A1201</strong>
+                          <p>美式风</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin7.jpg" alt=""></a>
+                          <strong>A1201Q</strong>
+                          <p>韩式田园</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin8.jpg" alt=""></a>
+                          <strong>A1500SQ</strong>
+                          <p>2017新实用风格卧房</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin9.jpg" alt=""></a>
+                          <strong>中式风 </strong>
+                          <p>中国韵系列衣柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin10.jpg" alt=""></a>
+                          <strong>简约主义 </strong>
+                          <p>书房</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin11.jpg" alt=""></a>
+                          <strong>中式风  </strong>
+                          <p>中国韵系列卧室</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin12.jpg" alt=""></a>
+                          <strong>2017现代简约 </strong>
+                          <p>榻榻米</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin13.jpg" alt=""></a>
+                          <strong>苏格兰田园 </strong>
+                          <p>榻榻米</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin14.jpg" alt=""></a>
+                          <strong>AZ1007</strong>
+                          <p>整体房</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin15.jpg" alt=""></a>
+                          <strong>AZ10025s</strong>
+                          <p>整体房</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin16.jpg" alt=""></a>
+                          <strong>APGM6L349AP</strong>
+                          <p>简欧浴室柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin17.jpg" alt=""></a>
+                          <strong>APGM6L348AP</strong>
+                          <p>简欧浴室柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin18.jpg" alt=""></a>
+                          <strong>APGM6L391AP</strong>
+                          <p>简欧浴室柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin19.jpg" alt=""></a>
+                          <strong>AM7702</strong>
+                          <p>地拖盆</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin20.jpg" alt=""></a>
+                          <strong>AM7703</strong>
+                          <p>地拖盆</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin21.jpg" alt=""></a>
+                          <strong>AM7704</strong>
+                          <p>地拖盆</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin22.jpg" alt=""></a>
+                          <strong>AB1271</strong>
+                          <p>连体坐便器</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin23.jpg" alt=""></a>
+                          <strong>AB1272</strong>
+                          <p>连体坐便器</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin24.jpg" alt=""></a>
+                          <strong>AB1273</strong>
+                          <p>波艾系列.儿童房</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin25.jpg" alt=""></a>
+                          <strong>A1178C
+                          </strong>
+                          <p>现代简约 风尚系列 衣帽间</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin26.jpg" alt=""></a>
+                          <strong>A1566TC</strong>
+                          <p>现代简约 风尚系列 玄关柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin27.jpg" alt=""></a>
+                          <strong>A81106C</strong>
+                          <p>现代简约 风尚系列 玄关柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin28.jpg" alt=""></a>
+                          <strong>A81119J
+                          </strong>
+                          <p>苏格兰田园 阳台柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin29.jpg" alt=""></a>
+                          <strong>A91145Q
+                          </strong>
+                          <p>现代简约 风尚系列 阳台柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                      <div class="col-md-4 col-sm-4">
+                          <a href="" class="products-border"><img src="img/products/chanqin30.jpg" alt=""></a>
+                          <strong>A91145TN
+                          </strong>
+                          <p>苏格兰田园 阳台柜</p>
+                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <p class="dec">
-              <a
-                title="致敬老男孩｜怎么会迷上你，我在问自己"
-                href="/playlist?id=2607570464"
-                class="tit f-thide s-fc0"
-              >致敬老男孩｜怎么会迷上你，我在问自己</a>
-            </p>
-            <p>
-              <span class="s-fc4">by</span>
-              <a
-                title="紫萱Daylily"
-                href="/user/home?id=13979389"
-                class="nm nm-icn f-thide s-fc3"
-              >紫萱Daylily</a>
-              <sup class="u-icn u-icn-84"></sup>
-            </p>
-          </li>
-        </ul>
-        <div id="m-pl-pager">
-          <div class="u-page">
-            <a href="javascript:void(0)" class="zbtn zprv js-disabled">上一页</a>
-            <a href="javascript:void(0)" class="zpgi js-selected">1</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=35"
-              class="zpgi"
-            >2</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=70"
-              class="zpgi"
-            >3</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=105"
-              class="zpgi"
-            >4</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=140"
-              class="zpgi"
-            >5</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=175"
-              class="zpgi"
-            >6</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=210"
-              class="zpgi"
-            >7</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=245"
-              class="zpgi"
-            >8</a>
-            <span class="zdot">...</span>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=1295"
-              class="zpgi"
-            >38</a>
-            <a
-              href="/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=35"
-              class="zbtn znxt"
-            >下一页</a>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
   </div>
 </template>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="../js/jquery-1.11.1.js"></script>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="../plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+<!--自己写的js-->
+<script src="../js/main.min.js"></script>
 <script>
-export default {
-  data() {
-    return {};
-  }
-};
+    export default {
+        data () {
+            return {
+
+            }
+        }
+    }
 </script>
-<style scoped>
-.showcaseComponent {
-  width: 100%;
-  height: auto;
-}
-
-.g-bd {
-  background-color: rgb(255, 255, 255);
-  border-bottom-color: rgb(211, 211, 211);
-  border-bottom-style: solid;
-  border-bottom-width: 0px;
-  border-image-outset: 0px;
-  border-image-repeat: stretch;
-  border-image-slice: 100%;
-  border-image-source: none;
-  border-image-width: 1;
-  border-left-color: rgb(211, 211, 211);
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-right-color: rgb(211, 211, 211);
-  border-right-style: solid;
-  border-right-width: 1px;
-  border-top-color: rgb(211, 211, 211);
-  border-top-style: solid;
-  border-top-width: 0px;
-  color: rgb(51, 51, 51);
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  height: 1744px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
-  margin-top: 0px;
-  min-height: 700px;
-  overflow-wrap: break-word;
-  text-size-adjust: 100%;
-  width: 980px;
-  word-break: break-word;
-}
-.g-wrap .p-pl .f-pr {
-  color: rgb(51, 51, 51);
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  height: 1664px;
-  overflow-wrap: break-word;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 40px;
-  position: relative;
-  text-size-adjust: 100%;
-  width: 900px;
-  word-break: break-word;
-  zoom: 1;
-}
-.u-title .f-cb {
-  border-bottom-color: rgb(194, 12, 12);
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  color: rgb(51, 51, 51);
-  display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  height: 40px;
-  overflow-wrap: break-word;
-  text-size-adjust: 100%;
-  width: 900px;
-  word-break: break-word;
-}
-.f-ff2 .d-flag{
-  color: rgb(51, 51, 51);
-  display: inline;
-  font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  height: auto;
-  overflow-wrap: break-word;
-  text-size-adjust: 100%;
-  width: auto;
-  word-break: break-word;
-}
-#cateToggleLink{
-   background-attachment:
-scroll
-;
-background-clip:
-border-box
-;
-background-color:
-rgba(0, 0, 0, 0)
-;
-background-image:
-url(https://s2.music.126.net/style/web2/img/button2.png?4953b5d…)
-;
-background-origin:
-padding-box
-;
-background-position-x:
-100%
-;
-background-position-y:
--100px
-;
-background-size:
-auto
-;
-color:
-rgb(51, 51, 51)
-;
-cursor:
-pointer
-;
-display:
-inline-block
-;
-font-family:
-Arial, Helvetica, sans-serif
-;
-font-size:
-12px
-;
-font-weight:
-400
-;
-height:
-31px
-;
-line-height:
-31px
-;
-margin-bottom:
-0px
-;
-margin-left:
-12px
-;
-margin-right:
-0px
-;
-margin-top:
-2px
-;
-overflow-wrap:
-break-word
-;
-overflow-x:
-hidden
-;
-overflow-y:
-hidden
-;
-padding-bottom:
-0px
-;
-padding-left:
-0px
-;
-padding-right:
-5px
-;
-padding-top:
-0px
-;
-text-align:
-center
-;
-text-decoration-color:
-rgb(51, 51, 51)
-;
-text-decoration-line:
-none
-;
-text-decoration-style:
-solid
-;
-text-size-adjust:
-100%
-;
-vertical-align:
-top
-;
-white-space:
-nowrap
-;
-width:
-86px
-;
-word-break:
-break-word
-;
-}
-.u-icn .u-icn-38{
-    background-attachment:
-scroll
-;
-background-clip:
-border-box
-;
-background-color:
-rgba(0, 0, 0, 0)
-;
-background-image:
-url(https://s2.music.126.net/style/web2/img/icon.png?f40c7cd…)
-;
-background-origin:
-padding-box
-;
-background-position-x:
--70px
-;
-background-position-y:
--543px
-;
-background-repeat-x:
-;
-background-repeat-y:
-;
-background-size:
-auto
-;
-color:
-rgb(12, 115, 194)
-;
-cursor:
-pointer
-;
-display:
-inline-block
-;
-font-family:
-Arial, Helvetica, sans-serif
-;
-font-size:
-12px
-;
-font-style:
-normal
-;
-font-weight:
-400
-;
-height:
-5px
-;
-line-height:
-31px
-;
-margin-left:
-5px
-;
-overflow-wrap:
-break-word
-;
-overflow-x:
-hidden
-;
-overflow-y:
-hidden
-;
-pointer-events:
-none
-;
-text-align:
-left
-;
-text-size-adjust:
-100%
-;
-vertical-align:
-middle
-;
-white-space:
-nowrap
-;
-width:
-8px
-;
-word-break:
-break-word
-;
-
-}
-.u-btn .f-fr .u-btn-hot .d-flag{
-    background-attachment:
-scroll
-;
-background-clip:
-border-box
-;
-background-color:
-rgba(0, 0, 0, 0)
-;
-background-image:
-url(https://s2.music.126.net/style/web2/img/button.png?df79ff0…)
-;
-background-origin:
-padding-box
-;
-background-position-x:
-0px
-;
-background-position-y:
-0px
-;
-background-repeat-x:
-;
-background-repeat-y:
-;
-background-size:
-auto
-;
-color:
-rgb(51, 51, 51)
-;
-display:
-block
-;
-float:
-right
-;
-font-family:
-Arial, Helvetica, sans-serif
-;
-font-size:
-12px
-;
-height:
-29px
-;
-overflow-wrap:
-break-word
-;
-text-size-adjust:
-100%
-;
-width:
-93px
-;
-word-break:
-break-word
-;
-}
-
-.a1{
-color:
-rgb(255, 255, 255)
-;
-cursor:
-pointer
-;
-display:
-block
-;
-float:
-left
-;
-font-family:
-Arial, Helvetica, sans-serif
-;
-font-size:
-12px
-;
-height:
-29px
-;
-line-height:
-29px
-;
-overflow-wrap:
-break-word
-;
-text-align:
-center
-;
-text-decoration-color:
-rgb(255, 255, 255)
-;
-text-decoration-line:
-none
-;
-text-decoration-style:
-solid
-;
-text-size-adjust:
-100%
-;
-width:
-46px
-;
-word-break:
-break-word
-;
-}
-.a2{
-color:
-rgb(51, 51, 51)
-;
-cursor:
-pointer
-;
-display:
-block
-;
-float:
-left
-;
-font-family:
-Arial, Helvetica, sans-serif
-;
-font-size:
-12px
-;
-height:
-29px
-;
-line-height:
-29px
-;
-overflow-wrap:
-break-word
-;
-text-align:
-center
-;
-text-decoration-color:
-rgb(51, 51, 51)
-;
-text-decoration-line:
-none
-;
-text-decoration-style:
-solid
-;
-text-size-adjust:
-100%
-;
-width:
-46px
-;
-word-break:
-break-word
-;
-}
-
+<style  scoped>
+@import "../css/main.css";
+@import "../plug/bootstrap-3.2.0-dist/css/bootstrap.min.css";
+@import "../plug/Font-Awesome-4.7.0/css/font-awesome.min.css";
 </style>

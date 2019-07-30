@@ -16,79 +16,14 @@
                 </div>
                 <div class="col-md-9 news-col9">
                     <div class="row">
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-4 col-sm-6" v-for="item in news" >
                             <a href="">
-                                <img src="img/news/news-1.jpg" alt="">
+                                <img :src="item.img_url" alt="">
                             </a>
-                            <span>[ 2017-06-13 ]</span>
-                            <p>筑梦启航|2018马克森全屋臻定制合肥运营中心年会圆满结束</p>
+                            <span>{{item.date}}</span>
+                            <p>{{item.title}}</p>
                             <p><a href="">了解详情</a></p>
                         </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-2.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-11 ]</span>
-                            <p>臻赢2018——马克森商学院营销型设计师特训营完美收官！</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-3.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-12 ]</span>
-                            <p>2018马克森全屋臻定制“爱家服务”，暖心开启！</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-4.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-07 ]</span>
-                            <p>加盟做马克森全屋臻定制不足一年，算了算账竟然赚120W</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-5.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-05 ]</span>
-                            <p>马克森全屋定制全国招商：火爆销售，想的到的疯狂赚钱！</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-6.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-02 ]</span>
-                            <p>一张表告诉你，实现年赚1000万的小目标，不难！</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-7.jpg" alt="">
-                            </a>
-                            <span>[ 2017-06-01 ]</span>
-                            <p>全屋臻定制时代，如何做一名会赚钱的经销商？</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-8.jpg" alt="">
-                            </a>
-                            <span>[ 2017-05-26 ]</span>
-                            <p>马克森全屋臻定制全国招商，想的到的疯狂赚钱！</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <a href="">
-                                <img src="img/news/news-9.jpg" alt="">
-                            </a>
-                            <span>[ 2017-05-25 ]</span>
-                            <p>2018投资定制家居行业，让资产翻倍增长</p>
-                            <p><a href="">了解详情</a></p>
-                        </div>
-
                     </div>
                     <nav aria-label="Page navigation">
                         <ul class="pagination pagination-lg">
@@ -143,7 +78,38 @@
     export default {
         data () {
             return {
-
+                news:[
+                    {
+                        url:"",
+                        img_url:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                        date:"[ 2017-06-11 ]",
+                        title:"臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+                    },
+                     {
+                        url:"",
+                        img_url:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                        date:"[ 2017-06-11 ]",
+                        title:"臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+                    },
+                     {
+                        url:"",
+                        img_url:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                        date:"[ 2017-06-11 ]",
+                        title:"臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+                    },
+                     {
+                        url:"",
+                        img_url:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                        date:"[ 2017-06-11 ]",
+                        title:"臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+                    },
+                     {
+                        url:"",
+                        img_url:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                        date:"[ 2017-06-11 ]",
+                        title:"臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+                    }
+                ]
             }
         }
     }

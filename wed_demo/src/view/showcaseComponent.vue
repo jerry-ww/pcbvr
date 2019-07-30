@@ -43,200 +43,14 @@
               </div>
               <div class="col-md-9">
                   <!--箭牌卫浴-->
-                  <div class="row">
-                      <div class="col-md-4 col-sm-4">
-                          <a href="xiangqing/matong.html" class="products-border"><img src="img/products/chanqin1.jpg"
-                                                                                      alt=""></a>
-                          <strong>衣帽柜</strong>
-                          <p>现代简约系列 </p>
+                  <div class="row" >
+                      <div class="col-md-3 col-sm-3" v-for="item in products">
+                          <a :href="item.url"  class="products-border"><img :src="item.img_src" alt=""></a>
+                          <strong>{{item.classfication}}</strong>
+                          <p>{{item.name}}</p>
                           <p>
-                              <a href="https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
-                                class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="xiangqing/yvgang.html" class="products-border"><img src="img/products/chanqin2.jpg"
-                                                                                      alt=""></a>
-                          <strong>现代简约 </strong>
-                          <p>玩色系列</p>
-                          <p><a href="https://shop68294732.taobao.com/category-380395410.htm?spm=a1z10.1-c.w4010-
-  12344195253.10.jpN6qf&search=y&parentCatId=380395408&parentCatName=%B7%A8%B1%EA%BD%E0%BE
-  %DF&catName=%D4%A1%B8%D7#bd" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin3.jpg" alt=""></a>
-                          <strong>
-                              现代简约 
-                          </strong>
-                          <p>优格系列</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin4.jpg" alt=""></a>
-                          <strong>
-                              现代简约 
-                          </strong>
-                          <p>优格系列-A</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin5.jpg" alt=""></a>
-                          <strong>现代简约 </strong>
-                          <p>温情系列</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin6.jpg" alt=""></a>
-                          <strong>A1201</strong>
-                          <p>美式风</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin7.jpg" alt=""></a>
-                          <strong>A1201Q</strong>
-                          <p>韩式田园</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin8.jpg" alt=""></a>
-                          <strong>A1500SQ</strong>
-                          <p>2017新实用风格卧房</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin9.jpg" alt=""></a>
-                          <strong>中式风 </strong>
-                          <p>中国韵系列衣柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin10.jpg" alt=""></a>
-                          <strong>简约主义 </strong>
-                          <p>书房</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin11.jpg" alt=""></a>
-                          <strong>中式风  </strong>
-                          <p>中国韵系列卧室</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin12.jpg" alt=""></a>
-                          <strong>2017现代简约 </strong>
-                          <p>榻榻米</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin13.jpg" alt=""></a>
-                          <strong>苏格兰田园 </strong>
-                          <p>榻榻米</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin14.jpg" alt=""></a>
-                          <strong>AZ1007</strong>
-                          <p>整体房</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin15.jpg" alt=""></a>
-                          <strong>AZ10025s</strong>
-                          <p>整体房</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin16.jpg" alt=""></a>
-                          <strong>APGM6L349AP</strong>
-                          <p>简欧浴室柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin17.jpg" alt=""></a>
-                          <strong>APGM6L348AP</strong>
-                          <p>简欧浴室柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin18.jpg" alt=""></a>
-                          <strong>APGM6L391AP</strong>
-                          <p>简欧浴室柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin19.jpg" alt=""></a>
-                          <strong>AM7702</strong>
-                          <p>地拖盆</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin20.jpg" alt=""></a>
-                          <strong>AM7703</strong>
-                          <p>地拖盆</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin21.jpg" alt=""></a>
-                          <strong>AM7704</strong>
-                          <p>地拖盆</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin22.jpg" alt=""></a>
-                          <strong>AB1271</strong>
-                          <p>连体坐便器</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin23.jpg" alt=""></a>
-                          <strong>AB1272</strong>
-                          <p>连体坐便器</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin24.jpg" alt=""></a>
-                          <strong>AB1273</strong>
-                          <p>波艾系列.儿童房</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin25.jpg" alt=""></a>
-                          <strong>A1178C
-                          </strong>
-                          <p>现代简约 风尚系列 衣帽间</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin26.jpg" alt=""></a>
-                          <strong>A1566TC</strong>
-                          <p>现代简约 风尚系列 玄关柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin27.jpg" alt=""></a>
-                          <strong>A81106C</strong>
-                          <p>现代简约 风尚系列 玄关柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin28.jpg" alt=""></a>
-                          <strong>A81119J
-                          </strong>
-                          <p>苏格兰田园 阳台柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin29.jpg" alt=""></a>
-                          <strong>A91145Q
-                          </strong>
-                          <p>现代简约 风尚系列 阳台柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
-                      </div>
-                      <div class="col-md-4 col-sm-4">
-                          <a href="" class="products-border"><img src="img/products/chanqin30.jpg" alt=""></a>
-                          <strong>A91145TN
-                          </strong>
-                          <p>苏格兰田园 阳台柜</p>
-                          <p><a href="" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a></p>
+                          <a :href="item.detail_url" class="products-aniu">了解更多 <i class="fa fa-angle-right"></i></a>
+                          </p>
                       </div>
                   </div>
               </div>
@@ -256,7 +70,43 @@
     export default {
         data () {
             return {
-
+                products:[
+                  {
+                  url:"https://www.baidu.com",
+                  img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                  classfication:"衣帽柜",
+                  name:"现代简约系列",
+                  detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                  },
+                   {
+                  url:"https://www.baidu.com",
+                  img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                  classfication:"衣帽柜",
+                  name:"现代简约系列",
+                  detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                  },
+                   {
+                  url:"https://www.baidu.com",
+                  img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                  classfication:"衣帽柜",
+                  name:"现代简约系列",
+                  detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                  },
+                   {
+                  url:"https://www.baidu.com",
+                  img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                  classfication:"衣帽柜",
+                  name:"现代简约系列",
+                  detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                  },
+                  {
+                  url:"https://www.baidu.com",
+                  img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+                  classfication:"衣帽柜",
+                  name:"现代简约系列",
+                  detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+                  },
+              ]
             }
         }
     }

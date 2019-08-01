@@ -11,7 +11,7 @@
                   <router-link to="/communityComponent">   <li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span><a href="">社区</a></span></li></router-link>
                   <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span><a href="">资讯</a></span></li></router-link>
                   <router-link to="/aboutComponent"> <li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span><a href="">关于我们</a></span></li></router-link>   
-                  <!--<router-link to="/downLoadComponent"> <li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span><a href="">下载客户端</a></span></li></router-link>   -->
+                  <router-link to="/userPage"> <li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span><a href="">用户页面</a></span></li></router-link>  
               </ul>
           </div>
           <div class="h-search">

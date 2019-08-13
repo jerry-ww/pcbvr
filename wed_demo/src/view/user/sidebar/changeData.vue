@@ -1,55 +1,6 @@
 <template>
-  <el-form ref="form" :model="form" label-width="80px">
-    <el-form-item label="昵称：">
-      <el-input v-model="form.username" placeholder></el-input>
-    </el-form-item>
-
-    <el-form-item label="性别">
-      <el-select class="selectbo" v-model="form.gender" placeholder="请选择">
-        <el-option
-          v-for="item in form.option"
-          :key="item.value"
-          :label="item.label"
-          :value="item.value"
-        ></el-option>
-      </el-select>
-    </el-form-item>
-
-    <el-form-item label="生日">
-      <el-date-picker class="selectbo" v-model="form.date" type="date" placeholder="选择日期"></el-date-picker>
-    </el-form-item>
-
-    <el-form-item label="居住地">
-      <el-cascader
-        class="selectbo"
-        size="large"
-        :options="form.option1"
-        v-model="form.region"
-        @change="handleChange"
-      ></el-cascader>
-    </el-form-item>
-
-    <el-form-item label="QQ号">
-      <el-input v-model="form.QQ" placeholder></el-input>
-    </el-form-item>
-
-    <el-form-item label="微信">
-      <el-input v-model="form.WeChat" placeholder></el-input>
-    </el-form-item>
-
-    <el-form-item label="手机号">
-      <el-input v-model="form.phone" placeholder type="phone"></el-input>
-    </el-form-item>
-
-    <el-form-item label="个人简介">
-      <el-input v-model="form.description" placeholder></el-input>
-    </el-form-item>
-
-    <el-form-item>
-      <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
-    </el-form-item>
-
-    <el-form-item>
+  <el-form class="baseform" ref="form" :model="form" label-width="80px">
+     <el-form-item class="img_container"> 
       <img
         id="choosePic"
         src="https://ssl-avatar.720static.com/@/avatar/3e2jOzhvsv3/69b0862fdd50dd63c609ccdccc727f47.jpeg?imageMogr2/thumbnail/270"
@@ -67,10 +18,60 @@
         :limit="3"
         :on-exceed="handleExceed"
       >
-        <el-button size="small" type="primary" @click="upPic(this,event)">点击上传</el-button>
+        <el-button class="img_button" size="small" type="primary" @click="upPic(this,event)">点击上传</el-button>
         <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
       </el-upload>
     </el-form-item>
+
+    <el-form-item label="昵 称">
+      <el-input class="name_input" v-model="form.username" placeholder></el-input>
+    </el-form-item>
+
+    <el-form-item label="性 别" >
+      <el-select class="selectbo" v-model="form.gender" placeholder="请选择">
+        <el-option
+          v-for="item in form.option"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        ></el-option>
+      </el-select>
+    </el-form-item>
+
+    <el-form-item label="生 日">
+      <el-date-picker class="selectbo" v-model="form.date" type="date" placeholder="选择日期"></el-date-picker>
+    </el-form-item>
+
+    <el-form-item label="居住地">
+      <el-cascader
+        class="selectbo"
+        size="large"
+        :options="form.option1"
+        v-model="form.region"
+        @change="handleChange"
+      ></el-cascader>
+    </el-form-item>
+
+    <el-form-item label="QQ号">
+      <el-input v-model="form.QQ" placeholder></el-input>
+    </el-form-item>
+
+    <el-form-item label="微 信">
+      <el-input v-model="form.WeChat" placeholder></el-input>
+    </el-form-item>
+
+    <el-form-item label="手机号">
+      <el-input v-model="form.phone" placeholder type="phone"></el-input>
+    </el-form-item>
+
+    <el-form-item label="个人简介">
+      <el-input v-model="form.description" placeholder></el-input>
+    </el-form-item>
+
+    <el-form-item>
+      <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
+    </el-form-item>
+
   </el-form>
 </template>
 
@@ -268,13 +269,30 @@ export default {
 };
 </script>
 <style scoped>
-/*
+
 .baseform {
-  min-height: 672px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
+  position:relative;
+  width:80%;
 }
+
+.img_container{
+  position:absolute;
+  right:30px;
+}
+
+#choosePic{
+  margin-left:50%;
+  transform:translateX(-50%);
+}
+
+.el-upload__tip{
+  line-height: 15px;
+}
+
+.name_input{
+  width:32%;
+}
+/*
 .block111 {
   width: 400px;
   padding-top: 20px;

@@ -17,7 +17,7 @@
 
     </div> -->
     <div style="margin-top:5px">
-        <el-row :gutter="10">
+        <el-row class="container" :gutter="10">
             <el-col :xs="4" :sm="4" :md="4" :lg="4">
             <div>
                 <el-menu default-active="1" class="el-menu-vertical-demo" style="min-height:900px" @select="handleSelect">
@@ -69,4 +69,8 @@ export default {
 };
 </script>
 <style scoped>
+.userPage{
+  max-width:95em;
+  margin:auto;
+}
 </style>

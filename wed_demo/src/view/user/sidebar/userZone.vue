@@ -1,7 +1,10 @@
 <template>
-  <div class>
-个人空间
+<div class="container">
+  <div class="user">
+    个人中心
   </div>
+</div>
+  
 </template>
 <script>
 export default {
@@ -11,5 +14,4 @@ export default {
 };
 </script>
 <style scoped>
-
 </style>

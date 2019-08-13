@@ -1,72 +1,57 @@
 <template>
-  <div class="baseform">
-    <div>
-      <div class="block111">
-        <label class>昵称：</label>
-        <el-input v-model="inputN" placeholder></el-input>
-        <label class>用户ID：</label>
-        <span>????</span>
-      </div>
-    </div>
+  <el-form ref="form" :model="form" label-width="80px">
+    <el-form-item label="昵称：">
+      <el-input v-model="form.username" placeholder></el-input>
+    </el-form-item>
 
-    <div class="block111">
-      <span class="demonstration">性别</span>
-      <el-select class="selectbo" v-model="value" placeholder="请选择">
+    <el-form-item label="性别">
+      <el-select class="selectbo" v-model="form.gender" placeholder="请选择">
         <el-option
-          v-for="item in options1"
+          v-for="item in form.option"
           :key="item.value"
           :label="item.label"
           :value="item.value"
         ></el-option>
       </el-select>
-    </div>
+    </el-form-item>
 
-    <div class="block111">
-      <span class="demonstration">生日</span>
-      <el-date-picker class="selectbo" v-model="value1" type="date" placeholder="选择日期"></el-date-picker>
-    </div>
+    <el-form-item label="生日">
+      <el-date-picker class="selectbo" v-model="form.date" type="date" placeholder="选择日期"></el-date-picker>
+    </el-form-item>
 
-    <div class="block111">
-      <label class>居住地</label>
+    <el-form-item label="居住地">
       <el-cascader
         class="selectbo"
         size="large"
-        :options="options2"
-        v-model="selectedOptions"
+        :options="form.option1"
+        v-model="form.region"
         @change="handleChange"
       ></el-cascader>
-    </div>
+    </el-form-item>
 
-    <div class="block111">
-      <panel>QQ号</panel>
-      
-      <el-input v-model="inputQ" placeholder></el-input>
-    
-    </div>
+    <el-form-item label="QQ号">
+      <el-input v-model="form.QQ" placeholder></el-input>
+    </el-form-item>
 
-    <div class="block111">
-      
-      <panel>微信号</panel>
-      <el-input v-model="inputW" placeholder></el-input>
- 
-    </div>
+    <el-form-item label="微信">
+      <el-input v-model="form.WeChat" placeholder></el-input>
+    </el-form-item>
 
-    <div class="block111">
-     
-      <panel>手机号</panel>
-      <el-input v-model="inputS" placeholder></el-input>
-     
-    </div>
-    <div class="block111">
-      <panel>个人简介</panel>
-      <el-input v-model="inputS" placeholder></el-input>
-    </div>
-    <div>
-      <el-button class="button1" type="primary" round>提交</el-button>
-    </div>
+    <el-form-item label="手机号">
+      <el-input v-model="form.phone" placeholder type="phone"></el-input>
+    </el-form-item>
 
-    <div class="picture">
+    <el-form-item label="个人简介">
+      <el-input v-model="form.description" placeholder></el-input>
+    </el-form-item>
+
+    <el-form-item>
+      <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
+    </el-form-item>
+
+    <el-form-item>
       <img
+        id="choosePic"
         src="https://ssl-avatar.720static.com/@/avatar/3e2jOzhvsv3/69b0862fdd50dd63c609ccdccc727f47.jpeg?imageMogr2/thumbnail/270"
         width="135"
         height="135"
@@ -82,11 +67,11 @@
         :limit="3"
         :on-exceed="handleExceed"
       >
-        <el-button size="small" type="primary">点击上传</el-button>
+        <el-button size="small" type="primary" @click="upPic(this,event)">点击上传</el-button>
         <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
       </el-upload>
-    </div>
-  </div>
+    </el-form-item>
+  </el-form>
 </template>
 
 
@@ -99,33 +84,36 @@ import { provinceAndCityData, CodeToText } from "element-china-area-data";
 export default {
   data() {
     return {
-      pickerOptions: {
-        disabledDate(time) {
-          return time.getTime() > Date.now();
-        }
-      },
-      value1: "",
-      options1: [
-        {
-          value: "选项1",
-          label: "男"
+      form: {
+        pickerOptions: {
+          disabledDate(time) {
+            return time.getTime() > Date.now();
+          }
         },
-        {
-          value: "选项2",
-          label: "女"
-        },
-        {
-          value: "选项3",
-          label: "保密"
-        }
-      ],
-      value: "",
-      options2: provinceAndCityData,
-      selectedOptions: [],
-      inputN: "",
-      inputQ: "",
-      inputW: "",
-      inputS: ""
+        date: "",
+        username: "",
+        gender: "",
+        option: [
+          {
+            value: "选项1",
+            label: "男"
+          },
+          {
+            value: "选项2",
+            label: "女"
+          },
+          {
+            value: "选项3",
+            label: "保密"
+          }
+        ],
+        option1: provinceAndCityData,
+        region: [],
+        QQ: "",
+        WeChat: "",
+        phone: "",
+        description: ""
+      }
     };
   },
 
@@ -150,26 +138,142 @@ export default {
     },
     beforeRemove(file, fileList) {
       return this.$confirm(`确定移除 ${file.name}？`);
+    },
+    submitForm(form) {
+      var obj = {
+        username: this.form.username,
+        gender: this.form.gender,
+        date: this.form.date,
+        region: this.form.region,
+        QQ: this.form.QQ,
+        WeChat: this.form.WeChat,
+        phone: this.form.phone,
+        description: this.form.description
+      };
+
+      $.ajax({
+        type: "post", // 提交方式
+        url: "接口",
+        data: {
+          username: username,
+          gender: gender,
+          date: date,
+          region: region,
+          QQ: QQ,
+          WeChat: WeChat,
+          phone: phone,
+          description: description
+        },
+        dataType: "json", // 服务器端返回的数据类型
+        success: function(data) {
+          // console.log(data);
+          if (data.code == 200) {
+            close_logpop();
+            alert("提交成功");
+            close_logpop();
+          } else {
+            alert("提交失败");
+          }
+        }
+      });
+    },
+    upPic(target, e) {
+      var src = e.target || window.event.srcElement;
+      var filename = src.value;
+      var imgName = filename.substring(filename.lastIndexOf("\\") + 1);
+      var ext, idx;
+      if (imgName == "") {
+        alert("请选择需要上传的图片！");
+        return;
+      } else {
+        idx = imgName.lastIndexOf(".");
+        if (idx != -1) {
+          ext = imgName.substr(idx + 1).toUpperCase();
+          ext = ext.toLowerCase();
+          if (ext != "jpg" && ext != "png") {
+            alert("只能上传.jpg .png类型的文件！");
+            return;
+          }
+        } else {
+          alert("只能上传.jpg .png类型的文件！");
+          target.value = "";
+          return;
+        }
+      }
+      var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
+      var fileSize = 0;
+      if (isIE && !target.files) {
+        var filePath = target.value;
+        var fileSystem = new ActiveXObject("Scription.FileSystemObject");
+        var file = fileSystem.GetFile(filePath);
+        fileSize = file.size;
+      } else {
+        fileSize = target.file[0].size;
+      }
+
+      if (fileSize > 1024 * 1024) {
+        alert("图片过大不能上传！");
+        return;
+      }
+
+      checkImgPX(target, 240, 300, target.files[0]);
+    },
+    checkImgPX(ths, width, height, file) {
+      var objUrl = getObjectURL(file);
+      var img = null;
+      img = document.createElement("img");
+      document.body.insertAdjacentElement("beforeend", img);
+      img.style.visibility = "hidden";
+      img.src = objUrl;
+      var imgwidth = 0;
+      var imgheight = 0;
+      if (img.complete) {
+        //判断是否图片在本页面完成加载
+        imgwidth = img.offsetWidth;
+        imgheight = img.offsetHeight;
+      } else {
+        img.onload = function() {
+          //待图片加载后获取宽和高
+          imgwidth = img.offsetWidth;
+          imgheight = img.offsetHeight;
+          alert(imgwidth + "," + imgheight);
+          if (imgwidth != width || imgheight != height) {
+            alert("必须是240像素*300像素的图片");
+            ths.value = "";
+            return;
+          } else {
+            console.log("objUrl=" + objUrl);
+            if (objUrl) {
+              //图片预览展示
+              var element = document.getElementById("choosePic");
+              alert(objUrl);
+              element.src = "objUrl";
+            }
+          }
+        };
+      }
+    },
+    getObjectURL(file) {
+      var url = null;
+      if (window.createObjectURL != undefined) {
+        url = window.createObjectURL(file);
+      } else if (window.URL != undefined) {
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL != undefined) {
+        url = window.webkitURL.createObjectURL(file);
+      }
+      return url;
     }
   }
 };
 </script>
 <style scoped>
+/*
 .baseform {
   min-height: 672px;
   background: #fff;
   -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15);
-}
-.picture {
-  height: 180px;
-  width: 180px;
-  background: #f8f8f8;
-  border: 1px solid #f8f8f8;
-  border-radius: 4px;
-  padding-top: 24px;
-  text-align: center;
-  position: relative;
 }
 .block111 {
   width: 400px;
@@ -180,7 +284,16 @@ export default {
 div {
   display: block;
 }
-
-
+*/
+.picture {
+  height: 180px;
+  width: 180px;
+  background: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 4px;
+  padding-top: 24px;
+  text-align: center;
+  position: relative;
+}
 
 </style>

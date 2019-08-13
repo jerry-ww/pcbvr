@@ -48,6 +48,11 @@ export default new Router({
       component: userPage,
       children: [
         {
+          path: '/',
+          name: 'changeData',
+          component: changeData,
+        },
+        {
           path: '/changeData',
           name: 'changeData',
           component: changeData,

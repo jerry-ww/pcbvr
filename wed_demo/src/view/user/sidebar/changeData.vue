@@ -32,22 +32,22 @@
     </el-form-item>
 
     <el-form-item label="QQ号">
-      <el-input v-model="form.QQ" placeholder></el-input>
+      <el-input class="qq_input" v-model="form.QQ" placeholder="请输入qq号"></el-input>
     </el-form-item>
 
     <el-form-item label="微 信">
-      <el-input v-model="form.WeChat" placeholder></el-input>
+      <el-input class="wechat_input" v-model="form.WeChat" placeholder="请输入微信号"></el-input>
     </el-form-item>
 
     <el-form-item label="手机号">
-      <el-input v-model="form.phone" placeholder type="phone"></el-input>
+      <el-input class="phone_input" v-model="form.phone" placeholder="请输入手机号" type="phone"></el-input>
     </el-form-item>
 
     <el-form-item label="个人简介">
-      <el-input v-model="form.description" placeholder></el-input>
+      <el-input type="textarea" :rows="5" class="person_input" v-model="form.description" placeholder="介绍一下你自己吧"></el-input>
     </el-form-item>
 
-    <el-form-item>
+    <el-form-item class="btn">
       <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
     </el-form-item>
     <el-form-item class= "imgbox">
@@ -185,8 +185,25 @@ export default {
   line-height: 15px;
 }
 
-.name_input {
-  width: 32%;
+.name_input{
+  width:33%;
+}
+
+.qq_input {
+  width:78%;
+}
+.wechat_input {
+  width:78%;
+}
+.phone_input{
+  width:78%;
+}
+.person_input{
+  width:78%;
+}
+.btn{
+  margin-left: 50%;
+  transform:translateX(-50%);
 }
 /*
 .block111 {

@@ -135,12 +135,12 @@ export default {
           alert("请输入账号密码");
         }else{
             $.ajax({
-                url: "http://101.132.40.201:8080/Myhouse1/demo/login.php",//填一下登录接口就好了
-                type: "post",    // 提交方式
+                url: "https://test-api-iwut.wutnews.net/room/room/get_room_list",//填一下登录接口就好了
+                type: "get",    // 提交方式
                 data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
                 dataType: "json",    // 服务器端返回的数据类型
                 success: function (data) {    
-                    //console.log(data);
+                    console.log(data);
                     if (data.code == 200) {
                         close_logpop();
                         alert("登录成功");
@@ -169,12 +169,12 @@ export default {
           alert("请输入账号密码");
         }else{
             $.ajax({
-                url: "http://101.132.40.201:8080/Myhouse1/demo/login.php",//填一下登录接口就好了
+                url: "https://test-api-iwut.wutnews.net/room/room/get_room_course",//填一下登录接口就好了
                 type: "post",    // 提交方式
                 data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
                 dataType: "json",    // 服务器端返回的数据类型
                 success: function (data) {    
-                    //console.log(data);
+                    console.log(data);
                     if (data.code == 200) {
                         close_logpop();
                         alert("注册成功");

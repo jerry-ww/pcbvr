@@ -24,9 +24,10 @@
                             </div>
                             <ul class="m-cvrlst f-cd" >
                                 <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
+                                    <div class="u-cover u-cover-1">                               
+                                        <a  href="http://101.132.40.201:8080/Myhouse1/pageName.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                        </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
                                             <span class="icon-headset"></span>
@@ -34,13 +35,14 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
+                                        <a class="tit s-fc0" href="http://101.132.40.201:8080/Myhouse1/pageName.html" >图书馆外围</a>
                                     </p>
                                 </li>
                                 <li >
                                     <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
+                                        <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                        </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
                                             <span class="icon-headset"></span>
@@ -48,13 +50,14 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
+                                        <a class="tit s-fc0" href="http://49.234.223.75:8080/potree-annotation/examples/lion.html" >图书馆一楼</a>
                                     </p>
                                 </li>
                                 <li >
                                     <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
+                                        <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion_las.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                        </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
                                             <span class="icon-headset"></span>
@@ -62,13 +65,44 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
+                                        <a class="tit s-fc0" href="http://49.234.223.75:8080/potree-annotation/examples/lion_las.html" >图书馆二楼</a>
+                                    </p>
+                                </li>
+                                <li >
+                                    <div class="u-cover u-cover-1">                                   
+                                        <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">    
+                                        </a>
+                                        <div class="bottom">
+                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
+                                            <span class="icon-headset"></span>
+                                            <span class="nb"></span>
+                                        </div>
+                                    </div>
+                                    <p class="dec">
+                                        <a class="tit s-fc0" href="http://49.234.156.168:8080/potree/examples/3f.html" >图书馆三楼</a>
+                                    </p>
+                                </li>
+                                <li >
+                                    <div class="u-cover u-cover-1">                              
+                                        <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                        </a>
+                                        <div class="bottom">
+                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
+                                            <span class="icon-headset"></span>
+                                            <span class="nb"></span>
+                                        </div>
+                                    </div>
+                                    <p class="dec">
+                                        <a class="tit s-fc0" href="http://49.234.156.168:8080/potree/examples/3f.html" >图书馆四楼</a>
                                     </p>
                                 </li>
                                 <li >
                                     <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
+                                        <a  href="http://49.234.154.17:8080/potree-org/examples/5f.html" class="msk" >
+                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                        </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
                                             <span class="icon-headset"></span>
@@ -76,63 +110,7 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >南湖图书馆</a>
+                                        <a class="tit s-fc0" href="http://49.234.154.17:8080/potree-org/examples/5f.html" >图书馆五楼</a>
                                     </p>
                                 </li>
                             </ul>
@@ -159,104 +137,6 @@
                                 <li >
                                     <div class="u-cover u-cover-1">
                                         <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg ">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
-                                        <a  href="" class="msk" ></a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
-                                    </p>
-                                </li>
-                                 <li >
-                                    <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg">
                                         <a  href="" class="msk" ></a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>

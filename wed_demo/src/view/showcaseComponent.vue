@@ -4,45 +4,30 @@
       <div class="container">
           <div class="row">
               <div class="col-md-3 col-sm-4 products-leul">
-                  <h3>马克森厨卫产品列表</h3>
+                  <h3>云景产品列表</h3>
                   <ul class="tarr">
                       <li class="products-leli"><a class="Js-prod-a1">全部产品</a></li>
-                      <li><a>榻榻米</a></li>
-                      <li><a>卧房</a></li>
-                      <li><a>客厅</a></li>
-                      <li><a>餐厅</a></li>
-                      <li><a>书房</a></li>
-                      <li><a>儿童房</a></li>
+                      <li><a>校园</a></li>
+                      <li><a>景区</a></li>
+                      <li><a>商场</a></li>
+                      <li><a>火车站</a></li>
                   </ul>
                   <ul>
-                      <li class="products-leli"><a href="#" class="Js-prod-a1">橱柜</a></li>
-                      <li><a href="">欧式</a></li>
-                      <li><a href="">现代简约</a></li>
-                      <li><a href="">新中式</a></li>
-                      <li><a href="">地中海</a></li>
-                      <li><a href="">台下盆</a></li>
-                      <li><a href="">新实用</a></li>
-                      <li><a href="">水箱</a></li>
-
+                      <li class="products-leli"><a href="#" class="Js-prod-a1">最新发布</a></li>
+                      <li><a href="">武汉理工</a></li>
+                      <li><a href="">华中科技</a></li>
+                      <li><a href="">华中师范</a></li>
+                      <li><a href="">中南财大</a></li>
                   </ul>
                   <ul>
-                      <li class="products-leli"><a href="#" class="Js-prod-a1">地板</a></li>
-                      <li><a href="">田园之美</a></li>
-                      <li><a href="">同步对纹</a></li>
-                      <li><a href="">雅致系列</a></li>
-                      <li><a href="">新品多层实木</a></li>
-                      <li><a href="">精品实木</a></li>
-                      <li><a href="">润木系列</a></li>
-                      <li><a href="">枫丹白露系列</a></li>
-                      <li><a href="">碧丽丝</a></li>
-                      <li><a href="">心境如兰</a></li>
-                      <li><a href="">晶莹系列</a></li>
-
+                      <li class="products-leli"><a href="#" class="Js-prod-a1">最热搜索</a></li>
+                      <li><a href="">黄鹤楼</a></li>
+                      <li><a href="">晴川阁</a></li>
+                      <li><a href="">长江大桥</a></li>
                   </ul>
 
               </div>
               <div class="col-md-9">
-                  <!--箭牌卫浴-->
                   <div class="row" >
                       <div class="col-md-3 col-sm-3" v-for="item in products">
                           <a :href="item.url"  class="products-border"><img :src="item.img_src" alt=""></a>
@@ -74,36 +59,36 @@
                   {
                   url:"https://www.baidu.com",
                   img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
-                  classfication:"衣帽柜",
-                  name:"现代简约系列",
+                  classfication:"图书馆",
+                  name:"校园",
                   detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
                   },
                    {
                   url:"https://www.baidu.com",
                   img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
-                  classfication:"衣帽柜",
-                  name:"现代简约系列",
+                  classfication:"图书馆",
+                  name:"校园",
                   detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
                   },
                    {
                   url:"https://www.baidu.com",
                   img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
-                  classfication:"衣帽柜",
-                  name:"现代简约系列",
+                  classfication:"图书馆",
+                  name:"校园",
                   detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
                   },
                    {
                   url:"https://www.baidu.com",
                   img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
-                  classfication:"衣帽柜",
-                  name:"现代简约系列",
+                  classfication:"图书馆",
+                  name:"校园",
                   detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
                   },
                   {
                   url:"https://www.baidu.com",
                   img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
-                  classfication:"衣帽柜",
-                  name:"现代简约系列",
+                  classfication:"图书馆",
+                  name:"校园",
                   detail_url:"https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
                   },
               ]

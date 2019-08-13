@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
+  <div class="change_pwd">
     <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
       <el-form-item label="原密码" prop="pass">
-        <el-input v-model="ruleForm.pass" placeholder="请输入原密码" type="password"></el-input>
+        <el-input class="pwd_input" v-model="ruleForm.pass" placeholder="请输入原密码" type="password"></el-input>
       </el-form-item>
       <el-form-item label="新密码" prop="newpass">
-        <el-input v-model="ruleForm.newpass" placeholder="请输入新密码" id="newkey" type="password"></el-input>
+        <el-input class="pwd_input" v-model="ruleForm.newpass" placeholder="请输入新密码" id="newkey" type="password"></el-input>
       </el-form-item>
       <el-form-item label="重复新密码" prop="checknewpass">
         <el-input
@@ -13,10 +13,11 @@
           placeholder="请再次输入新密码"
           id="newkey1"
           type="password"
+          class="pwd_input"
         ></el-input>
       </el-form-item>
     </el-form>
-    <div class="grid-content bg-purple">
+    <div class="grid-content bg-purple btn">
       <el-button type="primary" @click="submitForm('ruleForm')">保存</el-button>
     </div>
   </div>
@@ -103,4 +104,12 @@ export default {
 };
 </script>
 <style scoped>
+.change_pwd{
+  width: 60%;
+  margin-left: 20px;
+}
+.btn{
+  margin-left: 50%;
+  /* transform:translateX(-20%); */
+}
 </style>

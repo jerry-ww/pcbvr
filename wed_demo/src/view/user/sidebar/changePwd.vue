@@ -106,10 +106,12 @@ export default {
 <style scoped>
 .change_pwd{
   width: 60%;
-  margin-left: 20px;
+  margin-left: 120px;
 }
 .btn{
-  margin-left: 50%;
+  margin-left: 230px;
   /* transform:translateX(-20%); */
 }
+
+
 </style>

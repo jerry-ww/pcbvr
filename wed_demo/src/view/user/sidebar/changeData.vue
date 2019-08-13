@@ -58,7 +58,7 @@
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload"
       >
-        <img v-if="imageUrl" :src="imageUrl" class="avatar" />
+        <img v-if="imageUrl" :src="imageUrl" class="avatar" style="border-radius:20px ;border-radius:50%"/>
         <i v-else class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;border-radius:20px;border-radius:50%"></i>
       </el-upload>
     </el-form-item>
@@ -225,6 +225,7 @@ div {
   padding-top: 24px;
   text-align: center;
   position: relative;
+ 
 }
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;

@@ -1,33 +1,12 @@
 <template>
   <el-form class="baseform" ref="form" :model="form" label-width="80px">
-     <el-form-item class="img_container"> 
-      <img
-        id="choosePic"
-        src="https://ssl-avatar.720static.com/@/avatar/3e2jOzhvsv3/69b0862fdd50dd63c609ccdccc727f47.jpeg?imageMogr2/thumbnail/270"
-        width="135"
-        height="135"
-        style="border-radius: 50%; vertical-align: middle; background-color: rgb(244, 244, 244);"
-      />
-      <el-upload
-        class="upload-demo"
-        action="https://jsonplaceholder.typicode.com/posts/"
-        :on-preview="handlePreview"
-        :on-remove="handleRemove"
-        :before-remove="beforeRemove"
-        multiple
-        :limit="3"
-        :on-exceed="handleExceed"
-      >
-        <el-button class="img_button" size="small" type="primary" @click="upPic(this,event)">点击上传</el-button>
-        <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-      </el-upload>
-    </el-form-item>
+    <el-form-item class></el-form-item>
 
     <el-form-item label="昵 称">
       <el-input class="name_input" v-model="form.username" placeholder></el-input>
     </el-form-item>
 
-    <el-form-item label="性 别" >
+    <el-form-item label="性 别">
       <el-select class="selectbo" v-model="form.gender" placeholder="请选择">
         <el-option
           v-for="item in form.option"
@@ -71,7 +50,18 @@
     <el-form-item>
       <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
     </el-form-item>
-
+    <el-form-item class= "imgbox">
+      <el-upload
+        class="avatar-uploader"
+        action="https://jsonplaceholder.typicode.com/posts/"
+        :show-file-list="false"
+        :on-success="handleAvatarSuccess"
+        :before-upload="beforeAvatarUpload"
+      >
+        <img v-if="imageUrl" :src="imageUrl" class="avatar" />
+        <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+      </el-upload>
+    </el-form-item>
   </el-form>
 </template>
 
@@ -85,6 +75,7 @@ import { provinceAndCityData, CodeToText } from "element-china-area-data";
 export default {
   data() {
     return {
+      imageUrl: '',
       form: {
         pickerOptions: {
           disabledDate(time) {
@@ -119,26 +110,20 @@ export default {
   },
 
   methods: {
-    handleChange(value) {
-      var ctt = CodeToText[value[0]] + CodeToText[value[1]];
-      console.log(ctt);
+    handleAvatarSuccess(res, file) {
+      this.imageUrl = URL.createObjectURL(file.raw);
     },
+    beforeAvatarUpload(file) {
+      const isJPG = file.type === "image/jpeg";
+      const isLt2M = file.size / 1024 / 1024 < 2;
 
-    handleRemove(file, fileList) {
-      console.log(file, fileList);
-    },
-    handlePreview(file) {
-      console.log(file);
-    },
-    handleExceed(files, fileList) {
-      this.$message.warning(
-        `当前限制选择 3 个文件，本次选择了 ${
-          files.length
-        } 个文件，共选择了 ${files.length + fileList.length} 个文件`
-      );
-    },
-    beforeRemove(file, fileList) {
-      return this.$confirm(`确定移除 ${file.name}？`);
+      if (!isJPG) {
+        this.$message.error("上传头像图片只能是 JPG 格式!");
+      }
+      if (!isLt2M) {
+        this.$message.error("上传头像图片大小不能超过 2MB!");
+      }
+      return isJPG && isLt2M;
     },
     submitForm(form) {
       var obj = {
@@ -177,120 +162,31 @@ export default {
           }
         }
       });
-    },
-    upPic(target, e) {
-      var src = e.target || window.event.srcElement;
-      var filename = src.value;
-      var imgName = filename.substring(filename.lastIndexOf("\\") + 1);
-      var ext, idx;
-      if (imgName == "") {
-        alert("请选择需要上传的图片！");
-        return;
-      } else {
-        idx = imgName.lastIndexOf(".");
-        if (idx != -1) {
-          ext = imgName.substr(idx + 1).toUpperCase();
-          ext = ext.toLowerCase();
-          if (ext != "jpg" && ext != "png") {
-            alert("只能上传.jpg .png类型的文件！");
-            return;
-          }
-        } else {
-          alert("只能上传.jpg .png类型的文件！");
-          target.value = "";
-          return;
-        }
-      }
-      var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
-      var fileSize = 0;
-      if (isIE && !target.files) {
-        var filePath = target.value;
-        var fileSystem = new ActiveXObject("Scription.FileSystemObject");
-        var file = fileSystem.GetFile(filePath);
-        fileSize = file.size;
-      } else {
-        fileSize = target.file[0].size;
-      }
-
-      if (fileSize > 1024 * 1024) {
-        alert("图片过大不能上传！");
-        return;
-      }
-
-      checkImgPX(target, 240, 300, target.files[0]);
-    },
-    checkImgPX(ths, width, height, file) {
-      var objUrl = getObjectURL(file);
-      var img = null;
-      img = document.createElement("img");
-      document.body.insertAdjacentElement("beforeend", img);
-      img.style.visibility = "hidden";
-      img.src = objUrl;
-      var imgwidth = 0;
-      var imgheight = 0;
-      if (img.complete) {
-        //判断是否图片在本页面完成加载
-        imgwidth = img.offsetWidth;
-        imgheight = img.offsetHeight;
-      } else {
-        img.onload = function() {
-          //待图片加载后获取宽和高
-          imgwidth = img.offsetWidth;
-          imgheight = img.offsetHeight;
-          alert(imgwidth + "," + imgheight);
-          if (imgwidth != width || imgheight != height) {
-            alert("必须是240像素*300像素的图片");
-            ths.value = "";
-            return;
-          } else {
-            console.log("objUrl=" + objUrl);
-            if (objUrl) {
-              //图片预览展示
-              var element = document.getElementById("choosePic");
-              alert(objUrl);
-              element.src = "objUrl";
-            }
-          }
-        };
-      }
-    },
-    getObjectURL(file) {
-      var url = null;
-      if (window.createObjectURL != undefined) {
-        url = window.createObjectURL(file);
-      } else if (window.URL != undefined) {
-        url = window.URL.createObjectURL(file);
-      } else if (window.webkitURL != undefined) {
-        url = window.webkitURL.createObjectURL(file);
-      }
-      return url;
     }
   }
 };
 </script>
 <style scoped>
-
 .baseform {
-  position:relative;
-  width:80%;
+  position: relative;
+  width: 80%;
 }
 
-.img_container{
-  position:absolute;
-  right:30px;
+#choosePic {
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
-
-#choosePic{
-  margin-left:50%;
-  transform:translateX(-50%);
+.imgbox{
+  position: absolute;
+  right: 150px;
+  top:50px;
 }
-
-.el-upload__tip{
+.el-upload__tip {
   line-height: 15px;
 }
 
-.name_input{
-  width:32%;
+.name_input {
+  width: 32%;
 }
 /*
 .block111 {
@@ -313,5 +209,27 @@ div {
   text-align: center;
   position: relative;
 }
-
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409eff;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 178px;
+  height: 178px;
+  line-height: 178px;
+  text-align: center;
+}
+.avatar {
+  width: 178px;
+  height: 178px;
+  display: block;
+}
 </style>

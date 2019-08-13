@@ -59,7 +59,7 @@
         :before-upload="beforeAvatarUpload"
       >
         <img v-if="imageUrl" :src="imageUrl" class="avatar" />
-        <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+        <i v-else class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;"></i>
       </el-upload>
     </el-form-item>
   </el-form>

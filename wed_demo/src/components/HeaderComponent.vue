@@ -208,6 +208,7 @@ a {
 .h-controller{
     width: 50%;
     min-width: 1100px;
+    max-width: 1320px;
     height: 70px;
     line-height: 70px;
     margin: 0 auto;

@@ -1,8 +1,7 @@
 <template>
   <el-form class="baseform" ref="form" :model="form" label-width="80px">
-    <el-form-item class></el-form-item>
 
-    <el-form-item label="昵 称">
+    <el-form-item label="昵 称" >
       <el-input class="name_input" v-model="form.username" placeholder></el-input>
     </el-form-item>
 
@@ -170,6 +169,7 @@ export default {
 .baseform {
   position: relative;
   width: 80%;
+  margin: auto;
 }
 
 #choosePic {

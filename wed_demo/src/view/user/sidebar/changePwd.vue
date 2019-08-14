@@ -105,8 +105,8 @@ export default {
 </script>
 <style scoped>
 .change_pwd{
-  width: 60%;
-  margin-left: 120px;
+  width: 500px;
+  margin: auto;
 }
 .btn{
   margin-left: 230px;

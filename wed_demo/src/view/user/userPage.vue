@@ -1,6 +1,6 @@
 <template>
   <div class="userPage">
-    <div style="margin-top:5px">
+    <div class="userPage_inner" >
         <el-row class="container" :gutter="10">
             <el-col :xs="4" :sm="4" :md="4" :lg="4">
                 <div>
@@ -53,7 +53,13 @@ export default {
 </script>
 <style scoped>
 .userPage{
-  max-width:95em;
+  min-width: 1100px;
+  max-width: 1320px;
   margin:auto;
+}
+.userPage_inner{
+  width: 85%;
+  margin-top:5px;
+  margin: auto;
 }
 </style>

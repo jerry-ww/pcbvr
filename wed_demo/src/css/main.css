@@ -801,6 +801,13 @@ footer .footer-button {
     margin-top: 50px;
 }
 
+.nav{
+    margin-left:50%;
+    transform:translateX(-50%) ;
+}
+.products-yemian{
+    margin-top:50px;
+}
 .newsye .col-md-4 {
     margin-bottom: 10px;
 }

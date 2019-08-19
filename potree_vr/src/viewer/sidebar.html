@@ -1,0 +1,139 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<div id="sidebar_root" 
+	class="perfect_scrollbar navmenu navmenu-default navmenu-fixed-left unselectable" 
+	style="position: absolute; min-height: 100%; height: 100%; width: calc(100% - 1px); border-right: 1px solid black !important; overflow: hidden">
+	<div id="sidebar_header">
+		<span id="potree_branding" class="potree_sidebar_brand" style="display: flex; flex-direction: row">
+			<a href="http://www.Weletech.com" target="_blank">主页</a> 
+		</span>
+		<div id="potree_languages" style="font-family:arial;"></div>
+	</div>
+	<div>
+	<div id="potree_menu" class="accordion">
+	
+		<!-- APPEARANCE -->
+		<h3 id="menu_appearance"><span data-i18n="tb.rendering_opt"></span></h3>
+		<div>
+			<ul class="pv-menu-list">
+				<li><span data-i18n="appearance.nb_max_pts"></span>: <span id="lblPointBudget"></span> <div id="sldPointBudget"></div></li>
+				<li><span data-i18n="appearance.field_view"></span>: <span id="lblFOV"></span><div id="sldFOV"></div></li>
+
+				<div class="divider"><span>Eye-Dome-Lighting</span></div>
+
+				<li><label><input type="checkbox" id="chkEDLEnabled"/><span data-i18n="appearance.edl_enable"></span></label></li>
+				<li><span data-i18n="appearance.edl_radius"></span>: <span id="lblEDLRadius"></span><div id="sldEDLRadius"></div></li>
+				<li><span data-i18n="appearance.edl_strength"></span>: <span id="lblEDLStrength"></span><div id="sldEDLStrength"></div></li>
+				<div class="divider">
+					<span>Google Cardboard</span>
+				</div>
+				<li><label><input type="checkbox" id="chkVREnabled" onClick="viewer.setVREnabled(this.checked)"/><span data-i18n="appearance.vr_enable"></span></label></li>
+				
+				<div class="divider"><span>Background</span></div>
+
+				<li>
+					<selectgroup id="background_options">
+						<option id="background_options_skybox" value="skybox">Skybox</option>
+						<option id="background_options_gradient" value="gradient">Gradient</option>
+						<option id="background_options_black" value="black">Black</option>
+						<option id="background_options_white" value="white">White</option>
+						<option id="background_options_none" value="null">None</option>
+					</selectgroup>
+				</li>
+
+				<div class="divider"><span>Other</span></div>
+
+				<li>
+					<selectgroup id="splat_quality_options">
+						<option id="splat_quality_options_standard" value="standard">Standard</option>
+						<option id="splat_quality_options_hq" value="hq">High Quality</option>
+					</selectgroup>
+				</li>
+				
+				<li><span data-i18n="appearance.min_node_size"></span>: <span id="lblMinNodeSize"></span><div id="sldMinNodeSize"></div></li>
+				<li><label><input id="show_bounding_box" type="checkbox" /><span data-i18n="appearance.box"></span></label></li>
+				<li><label><input id="set_freeze" type="checkbox" /><span data-i18n="appearance.freeze"></span></label></li>
+			</ul>
+			
+		</div>
+		
+		<!-- TOOLS -->
+		<h3 id="menu_tools"><span data-i18n="tb.tools_opt"></span></h3>
+		<div class="pv-menu-list">
+
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Measurement</span></div>
+
+			<li id="tools"></li>
+			<!-- 路径浏览 -->
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Camera Track Setting</span></div>
+
+			<li id="camera_tools"></li>
+
+			<li id="point_exprt"></li>
+
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Clipping</span></div>
+
+			<li id="clipping_tools"></li>
+
+			<li>
+				<selectgroup id="cliptask_options">
+					<option id="cliptask_options_none" value="NONE">None</option>
+					<option id="cliptask_options_highlight" value="HIGHLIGHT">Highlight</option>
+					<option id="cliptask_options_show_inside" value="SHOW_INSIDE">Inside</option>
+					<option id="cliptask_options_show_outside" value="SHOW_OUTSIDE">Outside</option>
+				</selectgroup>
+			</li>
+
+			<li>
+				<selectgroup id="clipmethod_options">
+					<option id="clipmethod_options_any" value="INSIDE_ANY">Inside Any</option>
+					<option id="clipmethod_options_all" value="INSIDE_ALL">Inside All</option>
+				</selectgroup>
+			</li>
+			
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Navigation</span></div>
+
+			<li id="navigation"></li>
+
+			<li><span data-i18n="appearance.move_speed"></span>: <span id="lblMoveSpeed"></span><div id="sldMoveSpeed"></div></li>
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Annotation</span></div>
+
+			<li id="annotation"></li>
+		</div>
+
+		<!-- SCENE -->
+		<h3 id="menu_scene"><span data-i18n="tb.scene_opt"></span></h3>
+		<div class="pv-menu-list">
+
+			<div id="scene_export"></div>
+
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Objects</span></div>
+
+			<div id="scene_objects"></div>
+
+			<div class="divider" style="padding: 10px 0px 15px 0px"><span>Properties</span></div>
+
+			<div id="scene_object_properties"></div>
+		</div>
+
+		<!-- Classification -->
+		<h3 id="menu_classification"><span data-i18n="tb.classification_filter_opt"></span></h3>
+		<div>
+			<ul id="classificationList" class="pv-menu-list"></ul>
+		</div>
+		
+		<!-- ABOUT -->
+		<h3 id="menu_about"><span data-i18n="tb.about_opt"></span></h3>
+		<div>
+			<ul class="pv-menu-list">
+				<li><a href="http://www.Weletech.com" target="_blank">称象科技有限公司</a>
+				 是一家点云测量高科技公司，为装修企业各方提供精准的现场数据服务。
+装修之前建筑物CAD图纸经常不准确、甚至有的拆改项目就没有图纸，设计方各个专业设计人员需要到现场进行复尺，对于结构比较负责的工程，设计人员很难精准测量。
+称象科技的点云数据服务，有效的解决了以上问题。通过三维激光扫描技术，把现场各个空间的数据采集到云端，装修甲方、设计方、施工方等可以方便的看到现场图像和尺寸信息。
+激光扫描技术的使用，极大的提高了采集现场数据的方便性，为BIM精准设计、精准施工提供了强有力的支撑。
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+

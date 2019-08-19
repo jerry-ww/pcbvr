@@ -1,0 +1,25 @@
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ viewBox="0 0 105.21 212.32"
+ width="32px"
+ height="32px"
+ >
+ <defs>
+ <style>
+ .cls-1{fill:#e73100;}
+ .cls-1,.cls-2,.cls-3{
+ stroke:#231815;
+ stroke-linecap:round;
+ stroke-miterlimit:10;}
+ .cls-1,.cls-3{stroke-width:10px;}
+ .cls-2{fill:none;stroke-width:15px;}
+ .cls-3{fill:lime;}
+ </style>
+ </defs>
+ <title>资源 7</title>
+ <g id="图层_2" data-name="图层 2">
+ <g id="图层_1-2" data-name="图层 1">
+ <ellipse class="cls-1" cx="52.6" cy="160.33" rx="50.1" ry="29.49"/>
+ <line class="cls-2" x1="52.6" y1="157.33" x2="52.6" y2="56.83"/>
+ <circle class="cls-3" cx="52.6" cy="51.33" r="25.83"/>
+ </g></g></svg>

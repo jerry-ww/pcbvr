@@ -129,8 +129,8 @@ export default {
         $('.login_pop').hide();
     },
     login(){
-        var user_num = $("#user_num").val();
-        var pwd = $("#pwd").val();
+        let user_num = $("#user_num").val();
+        let pwd = $("#pwd").val();
         if(user_num=="请输入邮箱"||pwd=="请输入密码"){
           alert("请输入账号密码");
         }else{
@@ -163,8 +163,8 @@ export default {
         $('.register_pop').hide();
     },
     register(){
-        var user_num = $("#user_num").val();
-        var pwd = $("#pwd").val();
+        let user_num = $("#user_num").val();
+        let pwd = $("#pwd").val();
         if(user_num=="请输入邮箱"||pwd=="请输入密码"){
           alert("请输入账号密码");
         }else{

@@ -104,6 +104,7 @@ export default {
   position: relative;
   width: 100%;
   height: 450px;
+  background: #6797a5;
 }
 .slide-show {
   position: relative;

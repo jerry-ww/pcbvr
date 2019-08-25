@@ -26,10 +26,10 @@
         size="large"
         :options="form.option1"
         v-model="form.region"
-        @change="handleChange"
+
       ></el-cascader>
     </el-form-item>
-
+        <!--@change="handleChange" -->
     <el-form-item label="QQ号">
       <el-input class="qq_input" v-model="form.QQ" placeholder="请输入qq号"></el-input>
     </el-form-item>

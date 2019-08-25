@@ -26,7 +26,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">                               
                                         <a  href="http://101.132.40.201:8080/Myhouse1/pageName.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                            <img :src="Library">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -41,7 +41,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">
                                         <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                            <img :src="Library">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -56,7 +56,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">
                                         <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion_las.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                            <img :src="Library">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -71,7 +71,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">                                   
                                         <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">    
+                                            <img :src="Library">    
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -86,7 +86,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">                              
                                         <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                            <img :src="Library">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -101,7 +101,7 @@
                                 <li >
                                     <div class="u-cover u-cover-1">
                                         <a  href="http://49.234.154.17:8080/potree-org/examples/5f.html" class="msk" >
-                                            <img src="http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg ">
+                                            <img :src="Library">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -136,7 +136,7 @@
                             <ul class="m-cvrlst f-cd" >
                                 <li >
                                     <div class="u-cover u-cover-1">
-                                        <img src="http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg ">
+                                        <img :src="Build_one">
                                         <a  href="" class="msk" ></a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -165,34 +165,39 @@ import ElementUI from 'element-ui'
         data () {
             return {
                 invTime: 3000,
+                Library:require("../../static/library.jpg"),
+                Build_one:require("../../static/build_one.jpg"),
+                House:require("../../static/house.jpg"),
+                Siyuan:require("../../static/siyuan.jpg"),
                 slides: [
                     {
-                        src:'http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg',
+                        src:'static/library.jpg',
                         title:'南湖图书馆', 
                         url:'http://101.132.40.201:8080/Myhouse1/pageName.html',
                         // bgColor: '#487e42'
-                        bgColor: '#6797a5'
+                        // bgColor: '#6797a5'
                     },
                     {
-                        src:'http://101.132.40.201:8080/Myhouse1/picture/%E6%96%B0%E4%B8%80.jpg',
+                        src:'static/build_one.jpg',
                         title:'新一教学楼',
                         // bgColor:'#c1d6f9'
-                         bgColor: '#6797a5'
+                        // bgColor: '#6797a5'
                     },
                     {
-                        src:'http://101.132.40.201:8080/Myhouse1/picture/%E9%A3%9E%E9%A9%AC.jpg',
+                        src:'static/house.jpg',
                         title:'飞马广场',
                         // bgColor:'#e7be8c'
-                         bgColor: '#6797a5'
+                        // bgColor: '#6797a5'
                     },
                     {
-                        src:'http://101.132.40.201:8080/Myhouse1/picture/%E6%80%9D%E6%BA%90%E5%B9%BF%E5%9C%BA.jpg',
+                        src:'static/siyuan.jpg',
                         title:'思源广场',
                         // bgColor:'#d3d6db'
-                         bgColor: '#6797a5'
+                        // bgColor: '#6797a5'
                     }
                     
-                ]
+                ],
+                
             }
         },
 

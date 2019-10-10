@@ -1,113 +1,53 @@
-
 <template>
   <div id="about us">
     <div class="cantainer" style="backgroun:rgb(255,255,255);">
       <div class="one_lay" style="display: flex; align-items:center;justify-content:center;">
-        <div class="One_font1">pcbvr</div>
-        <div class="One_font2">1111</div>
+        <div class="One_font1">PcbVR</div>
+        <div class="One_font2">来一场别样的实景漫游</div>
       </div>
 
       <div class="Two_t1">
-        <p class="Two_font1">#@#@@#@#@##</p>
-        <p class="Two_font2">*^^%^$#@@%^%^*(^^$%$#$%^</p>
-        <p class="Two_font2">@#$%^%$#@#$%^%$#@$%^%$#</p>
+        <p class="Two_font1">我们为你提供什么？</p>
+        <p class="Two_font2">云景3D无缝实景漫游系统集互联网＋、场景体验、智能服务于一体，用户在线即可远程移动浏览由点云数据构建起来的高度实景还原的场景。</p>
+        <p class="Two_font2">网页上的实景漫游，身临其境感受远程的风景</p>
       </div>
 
       <div class="Two_lay" style="display: flex;align-items: center;justify-content: center;">
-        <div class="Two_block_1">
+        <div class="Two_block_1" v-for="(item,index) in features" :key="index">
           <div>
-            <img src="https://i.loli.net/2019/07/22/5d3534717e08536132.png" class="Two_img_1" />
+            <img :src="item.img_src" class="Two_img_1" />
           </div>
-          <div class="Two_title">@#$#@#@#$#</div>
-          <div class="Two_desc">@#$%^%$#@#$%^%$#@!#$%^%$#@</div>
+          <div class="Two_title">{{item.title}}</div>
+          <div class="Two_desc">{{item.desc}}</div>
           <div class="Two_scenes">
-            <img src="https://i.loli.net/2019/07/22/5d353426f307248577.png" class="Two_img_2" />@#$%^^%$#@#$%^%$#@#$#@#$#@#$#@#
-          </div>
-        </div>
-        <div class="Two_block_1">
-          <div>
-            <img src="https://i.loli.net/2019/07/22/5d3534a3cf96c88992.png" class="Two_img_1" />
-          </div>
-          <div class="Two_title">(*()(*(*())))</div>
-          <div class="Two_desc">@#$#@#$%$#@#$#@#$#@</div>
-          <div class="Two_scenes">
-            <img src="https://i.loli.net/2019/07/22/5d353426f307248577.png" class="Two_img2" />@#$%$#@!@#$#@!@#$#@!@#$%^
-          </div>
-        </div>
-
-        <div class="Two_block_1">
-          <div>
-            <img src="https://i.loli.net/2019/07/22/5d3534bd92ce191724.png" class="Two_img_1" />
-          </div>
-          <div class="Two_title">!@#$%$#@!@#$%</div>
-          <div class="Two_desc">!@#$%^^%$#@!@#$%$#@!</div>
-          <div class="Two_scenes">
-            <img src="https://i.loli.net/2019/07/22/5d353426f307248577.png" class="Two_img2" />^%$#@!@#$%$#@#$#$$$$$$$%%$%^%^%^%$#@
+            <img :src="item.scene_src" class="Two_img2" />{{item.scene_text}}
           </div>
         </div>
       </div>
 
       <div class="Three_lay_qTFZuQ">
         <div class="Three_title_3eSia1">
-          <p class="Three_font1_13U80h">@#￥%#@！#￥#@！@#￥#@！@#￥</p>
-          <p class="Three_font2_3Fu7iw">@#@！#￥#@！@#￥%￥#@！@#￥#@！#￥#@！@#￥#@！@#￥#@！@#￥#@！@#￥#@！#￥#@！@#￥</p>
+          <p class="Three_font1_13U80h">如何进行一次实景建模？</p>
+          <p class="Three_font2_3Fu7iw">通过专业的三维激光扫描设备采集实地三维信息，对获取的实景点云数据进行处理、转化，然后通过Potree视图器构建场景并进行展示</p>
         </div>
         <div class="Three_wrapper_1ZqD8O">
-          <div class="Three_scroll_2-BL6y">
+          <div class="Three_scroll_2-BL6y"  v-for="(item,index) in steps" :key="index">
             <div class="Three_block_1IUcxj">
-              <img src="https://i.loli.net/2019/07/22/5d35445c1310e71717.png" />
-              <p class="Three_t_3rzYMv">￥#@#￥#@#￥#@#￥#@！@</p>
-              <p class="Three_d_2qMEPG">#￥@@%@%#@%￥@#@#￥@%#@</p>
+              <img :src="item.img_src" />
+              <p class="Three_t_3rzYMv">{{item.name}}</p>
+              <p class="Three_d_2qMEPG">{{item.desc}}</p>
             </div>
             <div
-              class="Three_arrow_2pzh_j"
-              style="display: flex; align-items: center; justify-content: center;"
-            >
-              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
-            </div>
-            <div class="Three_block_1IUcxj">
-              <img src="https://i.loli.net/2019/07/22/5d35448866cc580293.png" />
-              <p class="Three_t_3rzYMv">%#@￥@##%@￥#@%#</p>
-              <p class="Three_d_2qMEPG">@￥@￥#@￥#@#@%@￥#</p>
-            </div>
-            <div
-              class="Three_arrow_2pzh_j"
-              style="display: flex; align-items: center; justify-content: center;"
-            >
-              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
-            </div>
-            <div class="Three_block_1IUcxj">
-              <img src="https://i.loli.net/2019/07/22/5d3544a0dbc3b79904.png" />
-              <p class="Three_t_3rzYMv">￥R@$#@$#@#@#$@</p>
-              <p class="Three_d_2qMEPG">@#￥%￥#@%@%￥#￥@￥！%</p>
-            </div>
-            <div
-              class="Three_arrow_2pzh_j"
-              style="display: flex; align-items: center; justify-content: center;"
-            >
-              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
-            </div>
-            <div class="Three_block_1IUcxj">
-              <img src="https://i.loli.net/2019/07/22/5d3544bcb328437300.png" />
-              <p class="Three_t_3rzYMv">C￥#@！@#@￥@！@@</p>
-              <p class="Three_d_2qMEPG">……%￥#@#￥%……%￥#@</p>
-            </div>
-            <div
-              class="Three_arrow_2pzh_j"
-              style="display: flex; align-items: center; justify-content: center;"
-            >
-              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
-            </div>
-            <div class="Three_block_1IUcxj">
-              <img src="https://i.loli.net/2019/07/22/5d3544d12bd6188905.png" />
-              <p class="Three_t_3rzYMv">%￥#@#￥%……%￥##￥%…………</p>
-              <p class="Three_d_2qMEPG">^%$#@#$%$#@#$%$#$%</p>
+                class="Three_arrow_2pzh_j"
+                style="display: flex; align-items: center; justify-content: center;"
+              >
+                <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
             </div>
           </div>
         </div>
 
-        <div class="Four_lay_1FUEly">
-          <div class="Four_title_cRdH-N">@#$%$#@#$#@#$#@#$#@#$</div>
+        <!-- <div class="Four_lay_1FUEly">
+          <div class="Four_title_cRdH-N">我们的服务流程是什么？</div>
           <div class="Four_tab_3nT3Bg">
             <div class="Four_nav_3Dxep0">
               <div style="position: relative; overflow: hidden; width: 100%; height: 100%;">
@@ -144,57 +84,22 @@
               <img src="https://i.loli.net/2019/07/22/5d3580965e3e734678.jpg" />
             </div>
             <div class="Four_tabLay_crmAzx">
-              <div class="Four_block_3dJtXE">
+              <div class="Four_block_3dJtXE" v-for="(item,index) in characteristics" :key="index">
                 <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d357fe85082814734.png" />
+                  <img :src="item.img_src" />
                 </div>
-                <div class="Four_btitle_3qvDVW">$#@#$#@!@#$#@#$#@!</div>
+                <div class="Four_btitle_3qvDVW">{{item.title}}</div>
                 <div class="Four_bdesc_1LPrDt">
-                  @#$#@!@#$#@#$#@#$#@#$@#
-                  <br />010-84762786
+                  {{item.desc}}
+                   <br />010-84762786 
                 </div>
-              </div>
-              <div class="Four_block_3dJtXE">
-                <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d357ff615d5511129.png" />
-                </div>
-                <div class="Four_btitle_3qvDVW">$#@!@#$#@!@#$#@!</div>
-                <div class="Four_bdesc_1LPrDt">%$#@!@#$%^%$#@!@#$%$#@!@#$</div>
-              </div>
-              <div class="Four_block_3dJtXE">
-                <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d357ffe07f3b96059.png" />
-                </div>
-                <div class="Four_btitle_3qvDVW">$#@!@#$#@#$#@!#$#@!@#$</div>
-                <div class="Four_bdesc_1LPrDt">!@#$%$#@!@#$%^%$#@!@#$%$#@!@#$#@!@#</div>
-              </div>
-              <div class="Four_block_3dJtXE">
-                <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d35800a6600730528.png" />
-                </div>
-                <div class="Four_btitle_3qvDVW">#@#$@$#$#%</div>
-                <div class="Four_bdesc_1LPrDt">$@#@$@$%%^#@%#!@#@@@!%#$</div>
-              </div>
-              <div class="Four_block_3dJtXE">
-                <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d35800a79bc065516.png" />
-                </div>
-                <div class="Four_btitle_3qvDVW">#@$#$@#@#%@#$</div>
-                <div class="Four_bdesc_1LPrDt">$#@$#@%$%#$^%#W$@$%^#$^%#$^#@^$@#%@^#$@</div>
-              </div>
-              <div class="Four_block_3dJtXE">
-                <div class="Four_stepImg_3VNefV">
-                  <img src="https://i.loli.net/2019/07/22/5d358013e943718400.png" />
-                </div>
-                <div class="Four_btitle_3qvDVW">#$@#$@#@$#@$#@#</div>
-                <div class="Four_bdesc_1LPrDt">#@!!#$@#@#@#$#$#%#@%#@#@@#@$@$#@@3</div>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="Five_lay_2n4VYR">
-          <div class="Five_title_3ORC7_">#@$#%$@#$@$#@$#$</div>
+          <div class="Five_title_3ORC7_">我们的产品特色有哪些？</div>
           <div class="Five_pc_1vnZXJ">
             <img
               src="https://i.loli.net/2019/07/22/5d3580c57231264358.png"
@@ -204,36 +109,36 @@
               class="Five_cell_1pRw6Y"
               style="width: 343px; text-align: right; margin-top: -40px; margin-left: -500px;"
             >
-              <div class="Five_name_dP4PTh">QWERTYUIOUHGFDSFGHJK</div>
-              <div class="Five_desc_3VgJ0d">UYIKUTJFHCGVKUOLYTUSJYZHFMJVHKOIKDUTXFH</div>
+              <div class="Five_name_dP4PTh">实景还原</div>
+              <div class="Five_desc_3VgJ0d">采用激光扫描真实场景实现实景复制，实景信息中所包含的空间位置及其对应的色彩信息均能快速精准获取</div>
             </div>
             <div
               class="Five_cell_1pRw6Y"
               style="width: 353px; text-align: center; margin-top: -220px; margin-left: -172px;"
             >
-              <div class="Five_name_dP4PTh">IYKUTJDNGXJGCHVKIYHNZDXF</div>
-              <div class="Five_desc_3VgJ0d">UTYGFCHTYDXGFCGVHYTDRXGFVHJBKUYGFCHVJUYTDXGF</div>
+              <div class="Five_name_dP4PTh">无缝浏览</div>
+              <div class="Five_desc_3VgJ0d">解决全景图画面跳转问题，支持用户无缝实景浏览</div>
             </div>
             <div
               class="Five_cell_1pRw6Y"
               style="width: 332px; text-align: left; margin-top: -40px; margin-left: 160px;"
             >
-              <div class="Five_name_dP4PTh">UGIYUTYRDGCHVDYDTZSDXGCH</div>
-              <div class="Five_desc_3VgJ0d">JHGYTDGFHGKJLKJUHTRERTYUIOLKJHCXDSTYGHVVJGGUJHJVh</div>
+              <div class="Five_name_dP4PTh">在线体验</div>
+              <div class="Five_desc_3VgJ0d">基于浏览器端，用户无需下载第三方插件，可以直接通过网页进行三维点云浏览</div>
             </div>
             <div
               class="Five_cell_1pRw6Y"
               style="width: 332px; text-align: left; margin-top: 140px; margin-left: 75px;"
             >
-              <div class="Five_name_dP4PTh">DFYTGCJGFKGFHGFJGVVHvj</div>
-              <div class="Five_desc_3VgJ0d">CUJGVJVBNBNBVBVJGFTJFDTDUGFUFCVCDTYHBVCFYJNB</div>
+              <div class="Five_name_dP4PTh">VR浏览</div>
+              <div class="Five_desc_3VgJ0d">支持VR设备浏览，头戴VR设备，通过手柄控制，在虚拟实景中漫步</div>
             </div>
             <div
               class="Five_cell_1pRw6Y"
               style="width: 353px; text-align: right; margin-top: 140px; margin-left: -423px;"
             >
-              <div class="Five_name_dP4PTh">HGTRDSXCVBHJHTRDESXCVBJYTRFDSXC</div>
-              <div class="Five_desc_3VgJ0d">KJHGFDXCVBNMKIJUYFRDSXZCVBNJMKIUYTRFDXCVBNJKIUY</div>
+              <div class="Five_name_dP4PTh">交互体验</div>
+              <div class="Five_desc_3VgJ0d">与场景互动，浏览过程提供简单的留言交互体验，使用户使用时产生参与感和代入感</div>
             </div>
           </div>
         </div>
@@ -241,57 +146,18 @@
         <div class="Six_lay_1boVDi">
           <div class="Six_title_3NEQBD">我们做过哪些案例？</div>
           <div class="Six_lay2_YO7VAb">
-            <div class="Six_list_3RWbL2">
+            <div class="Six_list_3RWbL2" v-for="(item,index) in cases" :key="index">
               <div class="Six_item_qwok9N">
                 <img
-                  src=""
+                  :src="item.img_src"
                   class="Six_img_svAk3f"
                 />
-                <a href target="_blank" class="Six_play_2v9bFK"></a>
+                <a href="item.src" target="_blank" class="Six_play_2v9bFK"></a>
                 <p class="Six_t1_1lIxT8">
-                  <a href>grsgadsvsdvdvzfvsfzdvz</a>
+                  <a href="item.src">{{item.title}}</a>
                 </p>
                 <p class="Six_t2_3ngxfL">
-                  <a href>sdgadsgsdgvfdvdfvfd</a>
-                </p>
-              </div>
-              <div class="Six_item_qwok9N">
-                <img
-                  src=""
-                  class="Six_img_svAk3f"
-                />
-                <a href target="_blank" class="Six_play_2v9bFK"></a>
-                <p class="Six_t1_1lIxT8">
-                  <a href>dffvafdasfvsdgadfgfdgd</a>
-                </p>
-                <p class="Six_t2_3ngxfL">
-                  <a href>asfcasdffvdsvfbbhgd</a>
-                </p>
-              </div>
-              <div class="Six_item_qwok9N">
-                <img
-                  src=""
-                  class="Six_img_svAk3f"
-                />
-                <a href target="_blank" class="Six_play_2v9bFK"></a>
-                <p class="Six_t1_1lIxT8">
-                  <a href>dvdsgbfdhbgngvn cbvn</a>
-                </p>
-                <p class="Six_t2_3ngxfL">
-                  <a href>faergthdjfyukjrtdyfuyhtr</a>
-                </p>
-              </div>
-              <div class="Six_item_qwok9N">
-                <img
-                  src=""
-                  class="Six_img_svAk3f"
-                />
-                <a href target="_blank" class="Six_play_2v9bFK"></a>
-                <p class="Six_t1_1lIxT8">
-                  <a href>afsergstrhrthtrhrh</a>
-                </p>
-                <p class="Six_t2_3ngxfL">
-                  <a href>adsfvsdfvdsfvfdvdffdffgfsg</a>
+                  <a href="item.src">{{item.desc}}</a>
                 </p>
               </div>
             </div>
@@ -306,7 +172,7 @@
             </div>
             <div>
               <p class="Seven_font1_1AWrTj">联系我们</p>
-              <p class="Seven_font2_2bk7XK">你有任何疑问，.........</p>
+              <p class="Seven_font2_2bk7XK">你有任何疑问，或想了解定制服务的详情及价格...</p>
               <p class="Seven_font1_1AWrTj">
                 +
                 <a href="tel://010-84762786">1234567890</a>
@@ -322,7 +188,124 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      features:[
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3534717e08536132.png",
+          title:"在线实景浏览",
+          desc:"无需下载相关插件，在线远程浏览由点云数据构建起来的高度还原的实景",
+          scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
+          scene_text:"适用场景：想要浏览点云三维场景，但是又不想下载额外的插件"
+
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3534a3cf96c88992.png",
+          title:"VR身临其境",
+          desc:"提供VR浏览模式，享受进一步的身临其境之感",
+          scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
+          scene_text:"适用场景：有去某地旅游的需求，提前体验场景；想去旅游但没有时间没有条件"
+
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3534bd92ce191724.png",
+          title:"个性定制服务",
+          desc:"替你定格下幸福的瞬间，为你留下立体的独家回忆",
+          scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
+          scene_text:"适用场景：想要用别样的方式记录重要时刻；旅游景区开发“虚拟场景”；企业商业宣传"
+
+        }
+      ],
+      steps:[
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d35445c1310e71717.png",
+          name:"专业三维激光扫描设备",
+          desc:"进行实地三维信息的采集"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d35448866cc580293.png",
+          name:"点云数据处理软件",
+          desc:"对获取的实景点云数据进行处理"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3544a0dbc3b79904.png",
+          name:"大型点云视图器Potree",
+          desc:"构建场景并进行展示"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3544bcb328437300.png",
+          name:"网站平台",
+          desc:"发布内容供用户访问浏览"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d3544d12bd6188905.png",
+          name:"用户终端观看",
+          desc:"支持PC/Android/VR一体机查看"
+        }
+      ],
+      characteristics:[
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d357fe85082814734.png",
+          title:"$#@#$#@!@#$#@#$#@!",
+          desc:"@#$#@!@#$#@#$#@#$#@#$@#"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d357ff615d5511129.png",
+          title:"$#@!@#$#@!@#$#@!",
+          desc:"%$#@!@#$%^%$#@!@#$%$#@!@#$"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d357ffe07f3b96059.png",
+          title:"$#@!@#$#@#$#@!#$#@!@#$",
+          desc:"!@#$%$#@!@#$%^%$#@!@#$%$#@!@#$#@!@#"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d35800a6600730528.png",
+          title:"#@#$@$#$#%",
+          desc:"$@#@$@$%%^#@%#!@#@@@!%#$"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d35800a79bc065516.png",
+          title:"#@$#$@#@#%@#$",
+          desc:"$#@$#@%$%#$^%#W$@$%^#$^%#$^#@^$@#%@^#$@"
+        },
+        {
+          img_src:"https://i.loli.net/2019/07/22/5d358013e943718400.png",
+          title:"#$@#$@#@$#@$#@#",
+          desc:"#@!!#$@#@#@#$#$#%#@%#@#@@#@$@$#@@3"
+        }
+      ],
+      cases:[
+        {
+          src:" ",
+          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          title:"武汉理工大学南湖图书馆",
+          desc:"校园.宣传展示"
+
+        },
+        {
+          src:" ",
+          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          title:"武汉理工大学南湖图书馆",
+          desc:"校园.宣传展示"
+
+        },
+        {
+          src:" ",
+          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          title:"武汉理工大学南湖图书馆",
+          desc:"校园.宣传展示"
+
+        },
+        {
+          src:" ",
+          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          title:"武汉理工大学南湖图书馆",
+          desc:"校园.宣传展示"
+
+        }
+      ]
+
+    };
   }
 };
 </script>
@@ -448,6 +431,7 @@ img {
   width: 11px;
 }
 .Three_arrow_2pzh_j {
+    
     height: 96px;
 }
 .Three_title_3eSia1 {

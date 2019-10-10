@@ -6,12 +6,12 @@
           </a>
           <div class="h-tab">
               <ul>
-                  <router-link to="/homePageComponent"><li v-bind:class="{ active: layout.changeColor[0] }" @click="changeBgcEvent(0)"><span><a href="">首页</a></span></li></router-link>
-                  <router-link to="/showcaseComponent">  <li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span><a href="">模型</a></span></li></router-link>
-                  <router-link to="/communityComponent">   <li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span><a href="">社区</a></span></li></router-link>
-                  <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span><a href="">资讯</a></span></li></router-link>
-                  <router-link to="/aboutComponent"> <li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span><a href="">关于我们</a></span></li></router-link>   
-                  <router-link to="/userPage"> <li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span><a href="">用户页面</a></span></li></router-link>  
+                  <router-link to="/homePageComponent"><li v-bind:class="{ active: layout.changeColor[0] }" @click="changeBgcEvent(0)"><span>首页</span></li></router-link>
+                  <router-link to="/showcaseComponent"><li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span>模型</span></li></router-link>
+                  <!-- <router-link to="/communityComponent"><li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span>社区</span></li></router-link> -->
+                  <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span>资讯</span></li></router-link>
+                  <router-link to="/aboutComponent"><li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span>关于我们</span></li></router-link>   
+                  <router-link to="/userPage"><li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span>用户页面</span></li></router-link>  
               </ul>
           </div>
           <div class="h-search">

@@ -27,7 +27,7 @@
           </div>
           <div class="col-md-9 news-col9">
             <div class="row">
-              <div class="col-md-4 col-sm-6" v-for="item in news">
+              <div class="col-md-4 col-sm-6" v-for="(item,index) in news" :key="index">
                 <a href>
                   <img :src="item.img_url" alt />
                 </a>
@@ -56,9 +56,6 @@
                 </li>
                 <li>
                   <a href="#">4</a>
-                </li>
-                <li>
-                  <a href="#">5</a>
                 </li>
                 <li>
                   <a href="#">...</a>
@@ -113,35 +110,35 @@ export default {
           img_url:
             "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
           date: "[ 2017-06-11 ]",
-          title: "臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
             "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
           date: "[ 2017-06-11 ]",
-          title: "臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
             "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
           date: "[ 2017-06-11 ]",
-          title: "臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
             "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
           date: "[ 2017-06-11 ]",
-          title: "臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
             "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
           date: "[ 2017-06-11 ]",
-          title: "臻赢2018——马克森商学院营销型设计师特训营完美收官！"
+          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         }
       ]
     };

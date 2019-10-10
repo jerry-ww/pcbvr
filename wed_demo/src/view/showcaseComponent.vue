@@ -26,37 +26,22 @@
               <li class="products-leli">
                 <a href="#" class="Js-prod-a1">最新发布</a>
               </li>
-              <li>
-                <a href>武汉理工</a>
-              </li>
-              <li>
-                <a href>华中科技</a>
-              </li>
-              <li>
-                <a href>华中师范</a>
-              </li>
-              <li>
-                <a href>中南财大</a>
+              <li v-for="(item,index) in latests" :key="index">
+                <a href="item.src">{{item.name}}</a>
               </li>
             </ul>
             <ul>
               <li class="products-leli">
                 <a href="#" class="Js-prod-a1">最热搜索</a>
               </li>
-              <li>
-                <a href>黄鹤楼</a>
-              </li>
-              <li>
-                <a href>晴川阁</a>
-              </li>
-              <li>
-                <a href>长江大桥</a>
+              <li v-for="(item,index) in hots" :key="index"> 
+                <a href="item.src">{{item.name}}</a>
               </li>
             </ul>
           </div>
           <div class="col-md-9">
             <div class="row">
-              <div class="col-md-3 col-sm-3" v-for="item in products">
+              <div class="col-md-3 col-sm-3" v-for="(item,index) in products" :key="index">
                 <a :href="item.url" class="products-border">
                   <img :src="item.img_src" alt />
                 </a>
@@ -165,6 +150,39 @@ export default {
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         }
+      ],
+      latests:[
+        {
+          src:" ",
+          name:"武汉理工"
+        },
+        {
+          src:" ",
+          name:"华中科技"
+        },
+        {
+          src:" ",
+          name:"华中师范"
+        },
+        {
+          src:" ",
+          name:"中南财大"
+        }
+        
+      ],
+      hots:[
+        {
+          src:"",
+          name:"黄鹤楼"
+        },
+        {
+          src:"",
+          name:"晴川阁"
+        },
+        {
+          src:"",
+          name:"长江大桥"
+        },
       ]
     };
   }

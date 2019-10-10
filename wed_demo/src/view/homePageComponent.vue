@@ -22,11 +22,11 @@
                                 </span> 
                                 
                             </div>
-                            <ul class="m-cvrlst f-cd" >
-                                <li >
+                            <ul class="m-cvrlst f-cd">
+                                <li v-for="(item,index) in commands" :key="index">
                                     <div class="u-cover u-cover-1">                               
-                                        <a  href="http://101.132.40.201:8080/Myhouse1/pageName.html" class="msk" >
-                                            <img :src="Library">
+                                        <a  href="item.src" class="msk" >
+                                            <img :src="item.img">
                                         </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
@@ -35,82 +35,7 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="http://101.132.40.201:8080/Myhouse1/pageName.html" >图书馆外围</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion.html" class="msk" >
-                                            <img :src="Library">
-                                        </a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="http://49.234.223.75:8080/potree-annotation/examples/lion.html" >图书馆一楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <a  href="http://49.234.223.75:8080/potree-annotation/examples/lion_las.html" class="msk" >
-                                            <img :src="Library">
-                                        </a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="http://49.234.223.75:8080/potree-annotation/examples/lion_las.html" >图书馆二楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">                                   
-                                        <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
-                                            <img :src="Library">    
-                                        </a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="http://49.234.156.168:8080/potree/examples/3f.html" >图书馆三楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">                              
-                                        <a  href="http://49.234.156.168:8080/potree/examples/3f.html" class="msk" >
-                                            <img :src="Library">
-                                        </a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="http://49.234.156.168:8080/potree/examples/3f.html" >图书馆四楼</a>
-                                    </p>
-                                </li>
-                                <li >
-                                    <div class="u-cover u-cover-1">
-                                        <a  href="http://49.234.154.17:8080/potree-org/examples/5f.html" class="msk" >
-                                            <img :src="Library">
-                                        </a>
-                                        <div class="bottom">
-                                            <a class="icon-play" title="播放" href="javascript:;" ></a>
-                                            <span class="icon-headset"></span>
-                                            <span class="nb"></span>
-                                        </div>
-                                    </div>
-                                    <p class="dec">
-                                        <a class="tit s-fc0" href="http://49.234.154.17:8080/potree-org/examples/5f.html" >图书馆五楼</a>
+                                        <a class="tit s-fc0" href="item.src" >{{item.title}}</a>
                                     </p>
                                 </li>
                             </ul>
@@ -133,11 +58,12 @@
                                 </span> 
                                 
                             </div>
-                            <ul class="m-cvrlst f-cd" >
+                            <ul class="m-cvrlst f-cd" v-for="(item,index) in latests" :key="index">
                                 <li >
                                     <div class="u-cover u-cover-1">
-                                        <img :src="Build_one">
-                                        <a  href="" class="msk" ></a>
+                                        <a  href="item.src" class="msk" >
+                                            <img :src="item.img_src">
+                                        </a>
                                         <div class="bottom">
                                             <a class="icon-play" title="播放" href="javascript:;" ></a>
                                             <span class="icon-headset"></span>
@@ -145,7 +71,7 @@
                                         </div>
                                     </div>
                                     <p class="dec">
-                                        <a class="tit s-fc0" href="" >新一教学楼</a>
+                                        <a class="tit s-fc0" href="item.src" >{{item.title}}</a>
                                     </p>
                                 </li>
                             </ul>
@@ -197,6 +123,46 @@ import ElementUI from 'element-ui'
                     }
                     
                 ],
+
+                commands:[
+                    {
+                        src:"http://101.132.40.201:8080/Myhouse1/pageName.html",
+                        img_src:"Library",
+                        title:"图书馆外围"
+                    },
+                    {
+                        src:"http://49.234.223.75:8080/potree-annotation/examples/lion.html",
+                        img_src:"Library",
+                        title:"图书馆一楼"
+                    },
+                    {
+                        src:"http://101.132.40.201:8080/Myhouse1/pageName.html",
+                        img_src:"Library",
+                        title:"图书馆二楼"
+                    },
+                    {
+                        src:"http://49.234.156.168:8080/potree/examples/3f.html",
+                        img_src:"Library",
+                        title:"图书馆三楼"
+                    },
+                    {
+                        src:"http://101.132.40.201:8080/Myhouse1/pageName.html",
+                        img_src:"Library",
+                        title:"图书馆四楼"
+                    },
+                    {
+                        src:"http://101.132.40.201:8080/Myhouse1/pageName.html",
+                        img_src:"Library",
+                        title:"图书馆五楼"
+                    }
+                ],
+                latests:[
+                   {
+                        src:"http://101.132.40.201:8080/Myhouse1/pageName.html",
+                        img_src:"Build_one",
+                        title:"新一教学楼"
+                    }
+                ]
                 
             }
         },
@@ -293,7 +259,6 @@ li{
     display: block;
 }
 .m-cvrlst li{
-    float: left;
     display: inline-block;
     width: 230px;
     height: 200px;

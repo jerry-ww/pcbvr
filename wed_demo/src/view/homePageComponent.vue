@@ -3,7 +3,8 @@
     <div class="block">
       <el-carousel height="450px" ref="carousel" @click.native="linkTo">
         <el-carousel-item v-for="item in slides" :key="item.img_src">
-          <img :src="slides.img_src">
+          <img class="carousel_img" :src="item.img_src">
+          <!-- <img src="../../static/library.jpg"> -->
         </el-carousel-item>
       </el-carousel>
     </div>
@@ -99,7 +100,7 @@ export default {
       Siyuan: require("../../static/siyuan.jpg"),
       slides: [
         {
-          img_src: require("../../static/library.jpg"),
+          img_src:require("../../static/library.jpg"),
           title: "南湖图书馆",
           url: "http://101.132.40.201:8080/Myhouse1/pageName.html"
           // bgColor: '#487e42'
@@ -184,21 +185,30 @@ export default {
 };
 </script>
 <style scoped>
- .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 14px;
+  opacity: 0.75;
+  line-height: 150px;
+  margin: 0;
+}
 
-  .el-carousel__item:nth-child(2n) {
-     background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-     background-color: #d3dce6;
-  }
+.el-carousel__item:nth-child(2n) {
+   background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+   background-color: #d3dce6;
+}
+
+.carousel_img{
+  margin: 0 auto;
+  width:75%;
+	height:100%;
+  display:flex;
+	align-items:center; 
+	justify-content:center;
+}
 
 a {
   cursor: pointer;

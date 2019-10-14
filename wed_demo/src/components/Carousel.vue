@@ -1,30 +1,10 @@
 <template>
-  <div class="slide-bgc" v-bind:style="{background:bgColor}">
-    <div class="slide-show" @mouseover="clearInv" @mouseout="runInv">
-      <div class="slide-img">
-        <a>
-          <transition name="slide-trans">
-            <a class="banner-a" :href="slides[nowIndex].url">
-              <img v-if="isShow" :src="slides[nowIndex].src" class="banner-img">
-            </a>
-          </transition>
-          <transition name="slide-trans-old">
-            <a class="banner-a" :href="slides[nowIndex].url">
-              <img v-if="!isShow" :src="slides[nowIndex].src" class="banner-img">
-            </a>
-          </transition>
-        </a>
-      </div>
-      <h3>{{ slides[nowIndex].title }}</h3>
-      <ul class="slide-pages">
-        <li v-for="(item, index) in slides" :key="index" @click="goto(index)">
-          <a :class="{on: index === nowIndex}">{{ index + 1 }}</a>
-        </li>
-      </ul>
-    </div>
-    <!-- 左右滑动arrow -->
-    <i class="arrow left-arrow el-icon-arrow-left" @click="goto(prevIndex)" @mouseover="clearInv" @mouseout="runInv"></i>
-    <i class="arrow right-arrow el-icon-arrow-right" @click="goto(nextIndex)" @mouseover="clearInv" @mouseout="runInv"></i>
+  <div class="block">
+    <el-carousel height="150px">
+      <el-carousel-item v-for="item in 4" :key="item">
+        <h3>{{ item }}</h3>
+      </el-carousel-item>
+    </el-carousel>
   </div>
 </template>
 
@@ -90,89 +70,20 @@ export default {
 </script>
 
 <style scoped>
-.slide-trans-enter-active {
-  transition: all .5s;
-}
-.slide-trans-enter {
-  transform: translateX(1000px);
-}
-.slide-trans-old-leave-active {
-  transition: all .5s;
-  transform: translateX(-1100px);
-}
-.slide-bgc{
-  position: relative;
-  width: 100%;
-  height: 450px;
-  background: #6797a5;
-}
-.slide-show {
-  position: relative;
-  margin: 15px 15px 15px 0;
-  width: 1100px;
-  /* width: 100%; */
-  height: 450px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-.slide-show h3 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background: #000;
-  opacity: .5;
-  bottom: 0;
-  height: 30px;
-  line-height: 30px;
-  text-align: left;
-  padding-left: 15px;
-}
-.slide-img {
-  width: 100%;
-}
-.slide-img img {
-  width: 100%;
-  position: absolute;
-  /* top: 20px; */
-  left: 0;
-}
-.banner-a{
-  width: 800px;
-  height: 380;
-}
-.banner-img{
-  width: 100%;
-  height: 100%;
-  background-size:100%; 
-}
-.slide-pages {
-  position: absolute;
-  bottom: 25px;
-  right: 15px;
-}
-.slide-pages li {
-  display: inline-block;
-  padding: 0 10px;
-  cursor: pointer;
-  color: #fff;
-}
-.slide-pages li .on {
-  text-decoration: underline;
-}
+  .el-carousel__item h3 {
+    color: #475669;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 150px;
+    margin: 0;
+  }
 
-.arrow{
-  position: absolute;
-  top: 200px;
-  font-size: 3em;
-  color: #ccc;
-  opacity: .6;
-  cursor: pointer;
-}
-.left-arrow{
-  left: 90px;
-}
-.right-arrow{
-  right: 90px;
-}
+  .el-carousel__item:nth-child(2n) {
+     background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+     background-color: #d3dce6;
+  }
+
 </style>

@@ -2,8 +2,8 @@
   <div id="about us">
     <div class="cantainer" style="backgroun:rgb(255,255,255);">
       <div class="one_lay" style="display: flex; align-items:center;justify-content:center;">
-        <div class="One_font1">PcbVR</div>
-        <div class="One_font2">来一场别样的实景漫游</div>
+        <div class="One_font1">PcbVR，让世界降临在你的掌心</div>
+        <div class="title-desc">无缝实景漫游系统</div>
       </div>
 
       <div class="Two_t1">
@@ -31,17 +31,55 @@
           <p class="Three_font2_3Fu7iw">通过专业的三维激光扫描设备采集实地三维信息，对获取的实景点云数据进行处理、转化，然后通过Potree视图器构建场景并进行展示</p>
         </div>
         <div class="Three_wrapper_1ZqD8O">
-          <div class="Three_scroll_2-BL6y"  v-for="(item,index) in steps" :key="index">
+          <div class="Three_scroll_2-BL6y">
             <div class="Three_block_1IUcxj">
-              <img :src="item.img_src" />
-              <p class="Three_t_3rzYMv">{{item.name}}</p>
-              <p class="Three_d_2qMEPG">{{item.desc}}</p>
+              <img src="https://i.loli.net/2019/07/22/5d35445c1310e71717.png" />
+              <p class="Three_t_3rzYMv">专业三维激光扫描设备</p>
+              <p class="Three_d_2qMEPG">进行实地三维信息的采集</p>
             </div>
             <div
-                class="Three_arrow_2pzh_j"
-                style="display: flex; align-items: center; justify-content: center;"
-              >
-                <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
+              class="Three_arrow_2pzh_j"
+              style="display: flex; align-items: center; justify-content: center;"
+            >
+              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
+            </div>
+            <div class="Three_block_1IUcxj">
+              <img src="https://i.loli.net/2019/07/22/5d35448866cc580293.png" />
+              <p class="Three_t_3rzYMv">点云数据处理软件</p>
+              <p class="Three_d_2qMEPG">对获取的实景点云数据进行处理</p>
+            </div>
+            <div
+              class="Three_arrow_2pzh_j"
+              style="display: flex; align-items: center; justify-content: center;"
+            >
+              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
+            </div>
+            <div class="Three_block_1IUcxj">
+              <img src="https://i.loli.net/2019/07/22/5d3544a0dbc3b79904.png" />
+              <p class="Three_t_3rzYMv">大型点云视图器Potree</p>
+              <p class="Three_d_2qMEPG">构建场景并进行展示</p>
+            </div>
+            <div
+              class="Three_arrow_2pzh_j"
+              style="display: flex; align-items: center; justify-content: center;"
+            >
+              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
+            </div>
+            <div class="Three_block_1IUcxj">
+              <img src="https://i.loli.net/2019/07/22/5d3544bcb328437300.png" />
+              <p class="Three_t_3rzYMv">网站平台</p>
+              <p class="Three_d_2qMEPG">发布内容供用户访问浏览</p>
+            </div>
+            <div
+              class="Three_arrow_2pzh_j"
+              style="display: flex; align-items: center; justify-content: center;"
+            >
+              <img src="https://i.loli.net/2019/07/22/5d3543f7add7b49370.png" />
+            </div>
+            <div class="Three_block_1IUcxj">
+              <img src="https://i.loli.net/2019/07/22/5d3544d12bd6188905.png" />
+              <p class="Three_t_3rzYMv">用户终端观看</p>
+              <p class="Three_d_2qMEPG">支持PC/Android/VR一体机查看</p>
             </div>
           </div>
         </div>
@@ -99,7 +137,7 @@
         </div> -->
 
         <div class="Five_lay_2n4VYR">
-          <div class="Five_title_3ORC7_">我们的产品特色有哪些？</div>
+          <div class="Five_title_3ORC7_">我们的产品优势</div>
           <div class="Five_pc_1vnZXJ">
             <img
               src="https://i.loli.net/2019/07/22/5d3580c57231264358.png"
@@ -137,8 +175,8 @@
               class="Five_cell_1pRw6Y"
               style="width: 353px; text-align: right; margin-top: 140px; margin-left: -423px;"
             >
-              <div class="Five_name_dP4PTh">交互体验</div>
-              <div class="Five_desc_3VgJ0d">与场景互动，浏览过程提供简单的留言交互体验，使用户使用时产生参与感和代入感</div>
+              <div class="Five_name_dP4PTh">案例丰富</div>
+              <div class="Five_desc_3VgJ0d">提供包括景区、商圈、博物馆等多种类场景，供你选择</div>
             </div>
           </div>
         </div>
@@ -146,8 +184,8 @@
         <div class="Six_lay_1boVDi">
           <div class="Six_title_3NEQBD">我们做过哪些案例？</div>
           <div class="Six_lay2_YO7VAb">
-            <div class="Six_list_3RWbL2" v-for="(item,index) in cases" :key="index">
-              <div class="Six_item_qwok9N">
+            <div class="Six_list_3RWbL2" >
+              <div class="Six_item_qwok9N" v-for="(item,index) in cases" :key="index">
                 <img
                   :src="item.img_src"
                   class="Six_img_svAk3f"
@@ -192,54 +230,27 @@ export default {
       features:[
         {
           img_src:"https://i.loli.net/2019/07/22/5d3534717e08536132.png",
-          title:"在线实景浏览",
-          desc:"无需下载相关插件，在线远程浏览由点云数据构建起来的高度还原的实景",
+          title:"优质多样的在线漫游产品",
+          desc:"无需下载相关插件，在线远程浏览数以千计的由点云数据还原的实景",
           scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
-          scene_text:"适用场景：想要浏览点云三维场景，但是又不想下载额外的插件"
+          scene_text:"适用场景：出行前、无聊时、收集资料时、任何一个想参观世界的时候，都可以来云景触碰世界"
 
         },
         {
           img_src:"https://i.loli.net/2019/07/22/5d3534a3cf96c88992.png",
-          title:"VR身临其境",
-          desc:"提供VR浏览模式，享受进一步的身临其境之感",
+          title:"贴心的产品定制服务",
+          desc:"为大型企业，景区，公共设施等提供点云扫描和产品定制服务",
           scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
-          scene_text:"适用场景：有去某地旅游的需求，提前体验场景；想去旅游但没有时间没有条件"
+          scene_text:"适用场景：景区、学校、商圈、大型企事业单位，云景为你开启新的宣传方式"
 
         },
         {
           img_src:"https://i.loli.net/2019/07/22/5d3534bd92ce191724.png",
-          title:"个性定制服务",
+          title:"难忘瞬间的定格画像",
           desc:"替你定格下幸福的瞬间，为你留下立体的独家回忆",
           scene_src:"https://i.loli.net/2019/07/22/5d353426f307248577.png",
-          scene_text:"适用场景：想要用别样的方式记录重要时刻；旅游景区开发“虚拟场景”；企业商业宣传"
+          scene_text:"适用场景：婚礼、毕业、乔迁、开业，任何一个您想永远铭记的瞬间，云景替您永久保存"
 
-        }
-      ],
-      steps:[
-        {
-          img_src:"https://i.loli.net/2019/07/22/5d35445c1310e71717.png",
-          name:"专业三维激光扫描设备",
-          desc:"进行实地三维信息的采集"
-        },
-        {
-          img_src:"https://i.loli.net/2019/07/22/5d35448866cc580293.png",
-          name:"点云数据处理软件",
-          desc:"对获取的实景点云数据进行处理"
-        },
-        {
-          img_src:"https://i.loli.net/2019/07/22/5d3544a0dbc3b79904.png",
-          name:"大型点云视图器Potree",
-          desc:"构建场景并进行展示"
-        },
-        {
-          img_src:"https://i.loli.net/2019/07/22/5d3544bcb328437300.png",
-          name:"网站平台",
-          desc:"发布内容供用户访问浏览"
-        },
-        {
-          img_src:"https://i.loli.net/2019/07/22/5d3544d12bd6188905.png",
-          name:"用户终端观看",
-          desc:"支持PC/Android/VR一体机查看"
         }
       ],
       characteristics:[
@@ -277,28 +288,28 @@ export default {
       cases:[
         {
           src:" ",
-          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          img_src:require("../../static/library.jpg"),
           title:"武汉理工大学南湖图书馆",
           desc:"校园.宣传展示"
 
         },
         {
           src:" ",
-          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          img_src:require("../../static/library.jpg"),
           title:"武汉理工大学南湖图书馆",
           desc:"校园.宣传展示"
 
         },
         {
           src:" ",
-          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          img_src:require("../../static/library.jpg"),
           title:"武汉理工大学南湖图书馆",
           desc:"校园.宣传展示"
 
         },
         {
           src:" ",
-          img_src:"http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+          img_src:require("../../static/library.jpg"),
           title:"武汉理工大学南湖图书馆",
           desc:"校园.宣传展示"
 
@@ -325,8 +336,9 @@ export default {
   font-size: 60px;
   padding-bottom: 10px;
 }
-.One—font2 {
-  font-size: 20px;
+.title-desc {
+  font-size: 25px;
+  font-weight: 20;
   padding-bottom: 30px;
 }
 .Two_t1 {

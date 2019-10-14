@@ -108,35 +108,35 @@ export default {
         {
           url: "",
           img_url:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           date: "[ 2017-06-11 ]",
           title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           date: "[ 2017-06-11 ]",
           title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           date: "[ 2017-06-11 ]",
           title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           date: "[ 2017-06-11 ]",
           title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         },
         {
           url: "",
           img_url:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           date: "[ 2017-06-11 ]",
           title: "VR全景漫游展示为世界文化遗产推广提供新思路"
         }

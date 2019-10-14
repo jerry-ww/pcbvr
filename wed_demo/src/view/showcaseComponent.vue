@@ -108,7 +108,8 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            // "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           classfication: "图书馆",
           name: "校园",
           detail_url:
@@ -117,7 +118,7 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           classfication: "图书馆",
           name: "校园",
           detail_url:
@@ -126,7 +127,7 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           classfication: "图书馆",
           name: "校园",
           detail_url:
@@ -135,7 +136,7 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+            require("../../static/library.jpg"),
           classfication: "图书馆",
           name: "校园",
           detail_url:
@@ -144,7 +145,7 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
+           require("../../static/library.jpg"),
           classfication: "图书馆",
           name: "校园",
           detail_url:

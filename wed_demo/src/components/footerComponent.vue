@@ -22,19 +22,19 @@
             </div>
             <ul class="enter">
                 <li class="unit">
-                    <a class="logo logonew logo-auth f-tid" href="//music.163.com/st/userbasic#/auth" target="_blank"></a>
+                    <a class="logo logonew logo-auth f-tid" href="#" target="_blank"></a>
                     <span class="tt tt-auth"></span>
                 </li>
                 <li class="unit">
-                    <a class="logo logonew logo-musician f-tid" href="//music.163.com/recruit" target="_blank"></a>
+                    <a class="logo logonew logo-musician f-tid" href="#" target="_blank"></a>
                     <span class="tt tt-musician"></span>
                 </li>
                 <li class="unit">
-                    <a class="logo logonew logo-reward f-tid" href="//music.163.com/web/reward" target="_blank"></a>
+                    <a class="logo logonew logo-reward f-tid" href="#" target="_blank"></a>
                     <span class="tt tt-reward"></span>
                 </li>
                 <li class="unit">
-                    <a class="logo logonew logo-cash f-tid" href="//music.163.com/uservideo#/plan" target="_blank"></a>
+                    <a class="logo logonew logo-cash f-tid" href="#" target="_blank"></a>
                     <span class="tt tt-cash"></span>
                 </li>
             </ul>

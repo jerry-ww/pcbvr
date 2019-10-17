@@ -141,13 +141,13 @@ export default {
         url: "http://49.234.154.17:5555/modify/info.php",
         data: {
           data:{
-              "name": username,
-              "sex": gender,
-              "birthday": date,
-              "location": region,
-              "qq": QQ,
-              "wechat": WeChat,
-              "desc": description
+              "name": this.form.username,
+              "sex": this.form.gender,
+              "birthday": this.form.date,
+              "location": this.form.region,
+              "qq": this.form.QQ,
+              "wechat": this.form.WeChat,
+              "desc": this.form.description
           }
         },
         dataType: "json", // 服务器端返回的数据类型

@@ -73,12 +73,13 @@ export default {
 
       methods: {
         submitForm(ruleForm) {
-          var obj = {
-            username: this.username,
-            oldpwd: this.ruleForm.pass,
-            newpwd: this.ruleForm.newpass
-          };
-
+          // var obj = {
+          //   username: this.username,
+          //   oldpwd: this.ruleForm.pass,
+          //   newpwd: this.ruleForm.newpass
+          // };
+          oldpwd= this.ruleForm.pass,
+          newpwd= this.ruleForm.newpass
           $.ajax({
             type: "post", // 提交方式
             url: "http://49.234.154.17:5555/modify/password.php",
@@ -87,11 +88,8 @@ export default {
             },
             dataType: "json", // 服务器端返回的数据类型
             success: function(data) {
-              // console.log(data);
               if (data.code == 200) {
-                close_logpop();
                 alert("修改成功");
-                close_logpop();
               } else {
                 alert("修改失败");
               }

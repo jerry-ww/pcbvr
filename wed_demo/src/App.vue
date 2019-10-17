@@ -9,7 +9,6 @@
 <script>
 import headerComponent from './components/headerComponent'
 import footerComponent from './components/footerComponent'
-// import { initUser } from './service/dataProcessing'
 export default {
   name: 'app',
   data () {
@@ -22,23 +21,6 @@ export default {
     footerComponent
   },
 
-  // methods:{
-  //   async initUser() {
-  //     let user;
-  //     let res = await initUser();
-
-  //     if ( res.success == true ) {
-  //       user = res.data[0].user;
-  //       const h = this.$createElement;
-
-  //       this.$notify({
-  //         title: user.name,
-  //         message: h('i', { style: 'color: teal'}, user.msg)
-  //       });       
-  //     }
-  //   }
-
-  // },
 
   mounted: function() {
     // 指定初始路由
@@ -66,15 +48,5 @@ body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, sectio
   width: 100%;
   min-width: 1120px;
   height: auto;
-  /* width: 100%;
-  min-width: 1120px;
-  height: 100%; */
-  /* font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #F5F5F5;
-  overflow: auto; */
 }
 </style>

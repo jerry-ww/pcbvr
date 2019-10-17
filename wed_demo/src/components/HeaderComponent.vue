@@ -1,37 +1,24 @@
 <template>
   <div class="headerComponent">
     <div class="h-controller"> 
-          <a href="#/findMusicComponent" class="h-logo">
+          <a href="#/homePageComponent" class="h-logo">
             PcbVR
           </a>
           <div class="h-tab">
               <ul>
                   <router-link to="/homePageComponent"><li v-bind:class="{ active: layout.changeColor[0] }" @click="changeBgcEvent(0)"><span>首页</span></li></router-link>
-                  <router-link to="/showcaseComponent"><li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span>模型</span></li></router-link>
-                  <!-- <router-link to="/communityComponent"><li v-bind:class="{ active: layout.changeColor[2] }" @click="changeBgcEvent(2)"><span>社区</span></li></router-link> -->
-                  <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span>资讯</span></li></router-link>
+                  <router-link to="/showcaseComponent"><li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span>案例展示</span></li></router-link>
+                  <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span>行业资讯</span></li></router-link>
                   <router-link to="/aboutComponent"><li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span>关于我们</span></li></router-link>   
-                  <router-link to="/userPage"><li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span>用户页面</span></li></router-link>  
+                  <router-link to="/userPage"><li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span>用户中心</span></li></router-link>  
               </ul>
           </div>
           <div class="h-search">
             <input type="text" id="search" value="校园/景点/车站" onFocus="if(value=='校园/景点/车站') {value=''}" onBlur="if(value==''){value='校园/景点/车站'}">
             <i class="fa fa-search"></i>
           </div>
-          <!-- <div class="h-author">
-          <a class="h-author">创作者中心</a>
-          </div> -->
           <div class="h-login" >
-              <!-- <span>登录</span> -->
-              <button class="login" @click="show_logpop()">登录</button>
-              <!-- <div class="h-login-type" v-if="layout.isShowLoginType">
-                  <ul>
-                      <li v-for="(item, index) in loginType">
-                          {{item}}
-                      </li>
-                  </ul>
-              </div> -->
-              <!-- <span v-text="loginName"></span> -->
+              <button id="log_btn" class="login" @click="show_logpop()">登录</button>
           </div>
       </div>
       <div class="login_pop" style="display: none">
@@ -140,10 +127,11 @@ export default {
                 data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
                 dataType: "json",    // 服务器端返回的数据类型
                 success: function (data) {    
-                    console.log(data);
+                    // console.log(data);
                     if (data.code == 200) {
                         alert("登录成功");
                         $('.login_pop').hide();
+                        document.getElementById("log_btn").innerHTML="欢迎"+user_num;
                         
                         // close_logpop();
                     }
@@ -189,12 +177,8 @@ export default {
     }
   }
 }
-
-
-
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 @import "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 a {
@@ -262,9 +246,6 @@ a {
     width: 300px;
     height: 32px;
     margin-top: 19px;
-    /* background: url(../assets/search.png) no-repeat; */
-    /* background-size: 10%; */
-    /* background-position: 5px 8px; */
     background-color: #fff;
     border-radius: 32px;
 }
@@ -280,12 +261,6 @@ a {
     outline: none; 
     background: transparent;
     color: #9b9b9b;
-    /* width: 160px;
-    height: 25px;
-    line-height: 25px;
-    padding-left: 10px; 
-    border-radius: 5px;
-    box-sizing: border-box; */
 }
 .h-controller .h-search i{
   position: absolute;

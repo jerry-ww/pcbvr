@@ -15,17 +15,16 @@
             <div class="rcmd-header">
               <a href class="tit">热门推荐</a>
               <div class="tabs">
-                <a href class="s-fc3">校园</a>
+                <a href class="tabs_tit">校园</a>
                 <span class="line">|</span>
-                <a href class="s-fc3">景区</a>
+                <a href class="tabs_tit">景区</a>
                 <span class="line">|</span>
-                <a href class="s-fc3">车站</a>
+                <a href class="tabs_tit">车站</a>
                 <span class="line">|</span>
-                <a href class="s-fc3">商场</a>
+                <a href class="tabs_tit">商场</a>
               </div>
               <span class="more">
-                <a href class="s-fc3">更多</a>
-                <i class="cor s-bg s-bg-6">&nbsp;</i>
+                <a href class="tabs_tit">更多</a>
               </span>
             </div>
             <ul class="m-cvrlst f-cd">
@@ -34,49 +33,9 @@
                   <a href="item.src" class="msk">
                     <img :src="item.img_src" />
                   </a>
-                  <div class="bottom">
-                    <a class="icon-play" title="播放" href="javascript:;"></a>
-                    <span class="icon-headset"></span>
-                    <span class="nb"></span>
-                  </div>
                 </div>
                 <p class="dec">
-                  <a class="tit s-fc0" href="item.src">{{item.title}}</a>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="rcmd">
-            <div class="rcmd-header">
-              <a href class="tit">最新发布</a>
-              <div class="tabs">
-                <a href class="s-fc3">校园</a>
-                <span class="line">|</span>
-                <a href class="s-fc3">景区</a>
-                <span class="line">|</span>
-                <a href class="s-fc3">车站</a>
-                <span class="line">|</span>
-                <a href class="s-fc3">商场</a>
-              </div>
-              <span class="more">
-                <a href class="s-fc3">更多</a>
-                <i class="cor s-bg s-bg-6">&nbsp;</i>
-              </span>
-            </div>
-            <ul class="m-cvrlst f-cd" v-for="(item,index) in latests" :key="index">
-              <li>
-                <div class="u-cover u-cover-1">
-                  <a href="item.src" class="msk">
-                    <img :src="item.img_src" />
-                  </a>
-                  <div class="bottom">
-                    <a class="icon-play" title="播放" href="javascript:;"></a>
-                    <span class="icon-headset"></span>
-                    <span class="nb"></span>
-                  </div>
-                </div>
-                <p class="dec">
-                  <a class="tit s-fc0" href="item.src">{{item.title}}</a>
+                  <a class="tit" href="item.src">{{item.title}}</a>
                 </p>
               </li>
             </ul>
@@ -87,8 +46,6 @@
   </div>
 </template>
 <script>
-// import {findMusic} from '../service/dataProcessing'
-// import carousel from "../components/Carousel";
 import ElementUI from "element-ui";
 export default {
   data() {
@@ -103,25 +60,21 @@ export default {
           img_src:require("../../static/library.jpg"),
           title: "南湖图书馆",
           url: "http://101.132.40.201:8080/Myhouse1/pageName.html"
-          // bgColor: '#487e42'
           // bgColor: '#6797a5'
         },
         {
           img_src:require("../../static/build_one.jpg"),
           title: "新一教学楼"
-          // bgColor:'#c1d6f9'
           // bgColor: '#6797a5'
         },
         {
           img_src: require("../../static/house.jpg"),
           title: "飞马广场"
-          // bgColor:'#e7be8c'
           // bgColor: '#6797a5'
         },
         {
           img_src: require("../../static/siyuan.jpg"),
           title: "思源广场"
-          // bgColor:'#d3d6db'
           // bgColor: '#6797a5'
         }
       ],
@@ -169,7 +122,7 @@ export default {
   },
 
   components: {
-    // carousel
+
   },
 
   computed: {},
@@ -203,7 +156,7 @@ export default {
 
 .carousel_img{
   margin: 0 auto;
-  width:75%;
+  width:1100px;
 	height:100%;
   display:flex;
 	align-items:center; 
@@ -224,8 +177,6 @@ a {
   min-height: 1425px;
   background-color: rgb(255, 255, 255);
   margin: 0px auto;
-  /* border-style: solid;
-    border-color: rgb(211, 211, 211); */
   border-image: initial;
   border-width: 0px 1px;
 }
@@ -239,9 +190,8 @@ a {
 }
 .rcmd-header {
   height: 33px;
-  padding: 0px 10px 0px 34px;
+  padding: 0px 40px 0px 35px;
   background-position: -225px -156px;
-  /* border-bottom: 2px solid #fdbfb2; */
 }
 .tit {
   float: left;
@@ -257,7 +207,7 @@ a {
 .tabs a:hover {
   text-decoration: underline;
 }
-.s-fc3 {
+.tabs_tit {
   color: #666;
 }
 .line {
@@ -267,6 +217,7 @@ a {
 .more {
   float: right;
   margin-top: 7px;
+  font-size:13px;
 }
 .more a:hover {
   text-decoration: underline;
@@ -305,6 +256,12 @@ li {
 }
 .msk {
   background-position: 0px 0px;
+}
+.msk img{
+  transition: all 0.6s;
+}
+.msk:hover img{
+    transform: scale(1.1);
 }
 .bottom {
   position: absolute;

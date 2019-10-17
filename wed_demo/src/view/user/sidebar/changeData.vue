@@ -136,18 +136,19 @@ export default {
         description: this.form.description
       };
 
-      $.ajax({
+     $.ajax({
         type: "post", // 提交方式
-        url: "接口",
+        url: "http://49.234.154.17:5555/modify/info.php",
         data: {
-          username: username,
-          gender: gender,
-          date: date,
-          region: region,
-          QQ: QQ,
-          WeChat: WeChat,
-          phone: phone,
-          description: description
+          data:{
+              "name": username,
+              "sex": gender,
+              "birthday": date,
+              "location": region,
+              "qq": QQ,
+              "wechat": WeChat,
+              "desc": description
+          }
         },
         dataType: "json", // 服务器端返回的数据类型
         success: function(data) {

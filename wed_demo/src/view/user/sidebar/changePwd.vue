@@ -81,9 +81,9 @@ export default {
 
           $.ajax({
             type: "post", // 提交方式
-            url: "接口",
+            url: "http://49.234.154.17:5555/modify/password.php",
             data: {
-              "username":username,"oldpassword":oldpwd,"newpassword":newpwd
+              "pwd":oldpwd,"new_pwd":newpwd
             },
             dataType: "json", // 服务器端返回的数据类型
             success: function(data) {

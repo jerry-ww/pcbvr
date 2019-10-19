@@ -32,6 +32,12 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
+  externals:{
+    'vue': 'Vue',
+    'element-ui': 'ELEMENT',
+    'vue-router': 'VueRouter',
+    'vue-resource': 'VueResource'
+  },
   // 引入jq
   plugins: [ 
     new webpack.ProvidePlugin({ 

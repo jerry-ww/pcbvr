@@ -10,7 +10,6 @@
                   <router-link to="/showcaseComponent"><li v-bind:class="{ active: layout.changeColor[1] }" @click="changeBgcEvent(1)"><span>案例展示</span></li></router-link>
                   <router-link to="/newsComponent"><li v-bind:class="{ active: layout.changeColor[3] }" @click="changeBgcEvent(3)"><span>行业资讯</span></li></router-link>
                   <router-link to="/aboutComponent"><li v-bind:class="{ active: layout.changeColor[4] }" @click="changeBgcEvent(4)"><span>关于我们</span></li></router-link>   
-                  <router-link to="/userPage"><li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span>用户中心</span></li></router-link>  
               </ul>
           </div>
           <div class="h-search">
@@ -25,7 +24,12 @@
                 <i class="el-icon-arrow-down el-icon--right"></i>
                 </el-button>
                 <el-dropdown-menu slot="dropdown">
-                    <el-dropdown-item @click.native = "logout">退出登录</el-dropdown-item>
+                    <el-dropdown-item >
+                        <router-link to="/userPage"><li v-bind:class="{ active: layout.changeColor[5] }" @click="changeBgcEvent(5)"><span>用户中心</span></li></router-link>  
+                    </el-dropdown-item>
+                    <el-dropdown-item @click.native = "logout">
+                        退出登录
+                    </el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
           </div>
@@ -40,11 +44,11 @@
                 <div class="popcon">
                     <div>
                         <div class="group">
-                            <input type="text" id="log_user_num" value="请输入邮箱" onFocus="if(value=='请输入邮箱') {value=''}" onBlur="if(value==''){value='请输入邮箱'}">
+                            <input type="text" id="log_user_num" value="请输入用户名" onFocus="if(value=='请输入用户名') {value=''}" onBlur="if(value==''){value='请输入用户名'}">
                             <i class="fa fa-user"></i>
                         </div>
                         <div class="group">
-                            <input type="text" id="log_pwd" value="请输入密码" onFocus="if(value=='请输入密码') {value=''}" onBlur="if(value==''){value='请输入密码'}">
+                            <input type="password" id="log_pwd" >
                             <i class="fa fa-lock"></i>
                         </div>
                     </div>
@@ -75,7 +79,7 @@
                 <div class="popcon">
                     <div>
                         <div class="group">
-                            <input type="text" id="reg_user_num" value="请输入邮箱" onFocus="if(value=='请输入邮箱') {value=''}" onBlur="if(value==''){value='请输入邮箱'}">
+                            <input type="text" id="reg_user_num" value="请输入用户名" onFocus="if(value=='请输入用户名') {value=''}" onBlur="if(value==''){value='请输入用户名'}">
                             <i class="fa fa-user"></i>
                         </div>
                         <div class="group">
@@ -128,7 +132,7 @@ export default {
     login(){
         let user_num = $("#log_user_num").val();
         let pwd = $("#log_pwd").val();
-        if(user_num=="请输入邮箱"||pwd=="请输入密码"){
+        if(user_num=="请输入用户名"||pwd==" "){
           alert("请输入账号密码");
         }else{
             $.ajax({
@@ -166,8 +170,8 @@ export default {
     register(){
         let user_num = $("#reg_user_num").val();
         let pwd = $("#reg_pwd").val();
-        if(user_num=="请输入邮箱"||pwd=="请输入密码"){
-          alert("请输入账号密码");
+        if(user_num=="请输入用户名"||pwd=="请输入密码"){
+          alert("请输入用户名密码");
         }else{
             $.ajax({
                 url: "http://49.234.154.17:5555/register.php",//填一下登录接口就好了
@@ -191,6 +195,13 @@ export default {
         alert("退出成功");
         document.getElementById("log_btn").style.display = "inline-block";
         document.getElementById("logged").style.display = "none";
+        let url=window.location.href;
+        let url_end=url.lastIndexOf('/');
+        let new_url=url.substr(0,url_end);
+
+        // history.pushState("", "Title", new_url+"/homePageComponent");
+        window.location.href=new_url+"/homePageComponent";
+
         // $.ajax({
         //     url: "http://49.234.154.17:5555/logout.php",//填一下登录接口就好了
         //     type: "post",    // 提交方式
@@ -458,6 +469,16 @@ a{
     color: #bbbbbb;
 }
 .popcon input[type="text"]{
+    width:90%;
+    height: 36px;
+    line-height: 36px;
+    border-radius:26px;
+    margin-top:20px;
+    padding:0 10px 0 40px;
+    border:none;
+    background: #f0f0f0;
+}
+.popcon input[type="password"]{
     width:90%;
     height: 36px;
     line-height: 36px;

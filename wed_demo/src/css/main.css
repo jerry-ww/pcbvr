@@ -30,7 +30,7 @@ h1 {
 }
 
 .izl-rmenu .consult {
-    background-image: url(../images/consult_icon.gif);
+    background-image: url(../assets/consult_icon.gif);
     background-repeat: no-repeat;
     background-position: center -77px;
     display: block;
@@ -57,7 +57,7 @@ h1 {
 }
 
 .izl-rmenu .cart {
-    background-image: url(../images/consult_icon.gif);
+    background-image: url(../assets/consult_icon.gif);
     background-repeat: no-repeat;
     background-position: center bottom;
     display: block;
@@ -78,7 +78,7 @@ h1 {
 }
 
 .izl-rmenu .btn_top {
-    background-image: url(../images/float_top.gif);
+    background-image: url(../assets/float_top.gif);
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
@@ -91,21 +91,21 @@ h1 {
 }
 
 .izl-rmenu .btn_top:hover {
-    background-image: url(../images/float_top.gif);
+    background-image: url(../assets/float_top.gif);
     background-repeat: no-repeat;
     background-position: center bottom;
 }
 
-.izl-rmenu .cart .pic {
+/* .izl-rmenu .cart .pic {
     display: none;
     position: absolute;
     left: -124px;
     top: 65px;
     width: 160px;
     height: 160px;
-    background: url(../images/weixin.jpg);
+    background: url(../assets/weixin.jpg);
     background-repeat: no-repeat;
-}
+} */
 
 #udesk-feedback-tab {
     position: fixed;
@@ -116,7 +116,7 @@ h1 {
     -moz-box-shadow: #DDD 0px -1px 5px;
     box-shadow: #DDD 0px -1px 5px;
     cursor: pointer;
-    background-image: url(../images/consult_icon.gif);
+    background-image: url(../assets/consult_icon.gif);
     background-repeat: no-repeat;
     background-position: center top;
     display: block;
@@ -130,7 +130,7 @@ h1 {
     opacity: 0.9;
 }
 
-.tanniu {
+/* .tanniu {
     padding: 10px 60px;
     border-radius: 3px;
     color: #fff;
@@ -138,7 +138,7 @@ h1 {
     display: inline-block;
     background: #2c2f34;
     margin-top: 40px;
-}
+} */
 
 a:hover {
     text-decoration: none;

@@ -74,7 +74,7 @@
     <!--回到顶部-->
     <!--在线客服-->
     <!--qq聊天代码部分begin-->
-    <div class="izl-rmenu">
+    <!-- <div class="izl-rmenu">
       <a class="consult" target="_blank">
         <div class="phone" style="display:none;">0592-1234567</div>
       </a>
@@ -89,7 +89,7 @@
       id="udesk-feedback-tab"
       class="udesk-feedback-tab-left"
       style="display: block; background-color: black;"
-    ></a>
+    ></a> -->
     <!--qq聊天代码部分end-->
   </div>
 </template>

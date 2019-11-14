@@ -140,6 +140,9 @@ export default {
                 type: "post",    // 提交方式
                 data: {"email":user_num,"password":pwd},  // data为String类型，必须为 Key/Value 格式。
                 dataType: "json",    // 服务器端返回的数据类型
+                xhrFields: {
+                    withCredentials: true // 这里设置了withCredentials
+                },
                 success: function (data) {    
                     // console.log(data);
                     if (data.code == 200) {

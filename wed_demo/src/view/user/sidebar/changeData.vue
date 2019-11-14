@@ -135,30 +135,49 @@ export default {
         phone: this.form.phone,
         description: this.form.description
       };
-
-     $.ajax({
+      var name = this.form.username;
+      var sex = this.form.gender;
+      var birthday = this.form.date;
+      var location = this.form.region;
+      var qq = this.form.QQ;
+      var wechat = this.form.WeChat;
+      var description = this.form.description;
+      console.log(obj)
+      console.log(obj.name)
+      $.ajax({
         type: "post", // 提交方式
-        url: "http://49.234.154.17:5555/modify/info.php",
-        data: {
+        url: "http://49.234.154.17:5555/user_modify_info.php",
+         data: {
           data:{
-              "name": this.form.username,
-              "sex": this.form.gender,
-              "birthday": this.form.date,
-              "location": this.form.region,
-              "qq": this.form.QQ,
-              "wechat": this.form.WeChat,
-              "desc": this.form.description
+              // "name": this.form.username,
+              // "sex": this.form.gender,
+              // "birthday": this.form.date,
+              // "location": this.form.region,
+              // "qq": this.form.QQ,
+              // "wechat": this.form.WeChat,
+              // "description": this.form.description
+              "name": obj.username,
+              "sex": obj.gender,
+              "birthday": obj.date,
+              "location": obj.region,
+              "qq": obj. QQ,
+              "wechat": obj.WeChat,
+              "description": obj.description
           }
+        },
+        xhrFields: {
+          withCredentials: true // 这里设置了withCredentials
         },
         dataType: "json", // 服务器端返回的数据类型
         success: function(data) {
           // console.log(data);
           if (data.code == 200) {
-            close_logpop();
+            // close_logpop();
             alert("提交成功");
-            close_logpop();
+            // close_logpop();
           } else {
             alert("提交失败");
+            console.log(obj)
           }
         }
       });

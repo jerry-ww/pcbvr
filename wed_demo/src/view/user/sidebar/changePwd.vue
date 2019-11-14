@@ -88,9 +88,12 @@ export default {
       console.log(oldPwd);
       $.ajax({
         type: "post", // 提交方式
-        url: "http://49.234.154.17:5555/modify/password.php",
+        url: "http://49.234.154.17:5555/user_modify_password.php",
         data: {"pwd":oldPwd,"new_pwd":newPwd},
         dataType: "json", // 服务器端返回的数据类型
+        xhrFields: {
+          withCredentials: true// 这里设置了withCredentials
+        },
         success: function(data) {
           if (data.code == 200) {
             alert("修改成功");

@@ -30,12 +30,12 @@
             <ul class="m-cvrlst f-cd">
               <li v-for="(item,index) in commands" :key="index">
                 <div class="u-cover u-cover-1">
-                  <a href="item.src" class="msk">
+                  <a :href="item.src" class="msk">
                     <img :src="item.img_src" />
                   </a>
                 </div>
                 <p class="dec">
-                  <a class="tit" href="item.src">{{item.title}}</a>
+                  <a class="tit" :href="item.src">{{item.title}}</a>
                 </p>
               </li>
             </ul>
@@ -81,32 +81,32 @@ export default {
 
       commands: [
         {
-          src: "http://101.132.40.201:8080/Myhouse1/pageName.html",
+          src: "http://49.234.154.17/potree-org/examples/Outer.html",
           img_src: require("../../static/library.jpg"),
           title: "图书馆外围"
         },
         {
-          src: "http://49.234.223.75:8080/potree-annotation/examples/lion.html",
+          src: "http://49.234.154.17/potree-org/examples/1f.html",
           img_src: require("../../static/library.jpg"),
           title: "图书馆一楼"
         },
         {
-          src: "http://101.132.40.201:8080/Myhouse1/pageName.html",
+          src: "http://49.234.154.17/potree-org/examples/2f.html",
           img_src: require("../../static/library.jpg"),
           title: "图书馆二楼"
         },
         {
-          src: "http://49.234.156.168:8080/potree/examples/3f.html",
+          src: "http://49.234.154.17/potree-org/examples/3f.html",
           img_src:require("../../static/library.jpg"),
           title: "图书馆三楼"
         },
         {
-          src: "http://101.132.40.201:8080/Myhouse1/pageName.html",
+          src: "http://49.234.154.17/potree-org/examples/4f.html",
           img_src: require("../../static/library.jpg"),
           title: "图书馆四楼"
         },
         {
-          src: "http://101.132.40.201:8080/Myhouse1/pageName.html",
+          src: "http://49.234.154.17/potree-org/examples/5f.html",
           img_src: require("../../static/library.jpg"),
           title: "图书馆五楼"
         }

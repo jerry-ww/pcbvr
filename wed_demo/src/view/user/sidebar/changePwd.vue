@@ -27,23 +27,38 @@
 <script>
 export default {
   data() {
-    var validatePass = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error("请输入新密码"));
-      } else {
-        if (this.ruleForm.checknewpass !== "") {
-          this.$refs.ruleForm.validateField("checknewpass");
+    var validate_password = (rule, value, callback) => {
+      if(this.ruleForm.checknewpass){
+        if(!value){
+          callback(new Error("请确认您的密码"))
+        }else if(!(value===this.ruleForm.checknewpass)){
+          callback(new Error("两次输入的密码不一致"))
+        }else{
+          callback()
         }
-        callback();
+      }else{
+        if(!value){
+          callback(new Error("密码不能为空"))
+        }else{
+          callback()
+        }
       }
     };
-    var validatePass2 = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error("请再次输入密码"));
-      } else if (value !== this.ruleForm.newpass) {
-        callback(new Error("两次输入密码不一致!"));
-      } else {
-        callback();
+    var validateConfirmpwd = (rule, value, callback) => {
+      if(this.ruleForm.newpass){
+        if(!value){
+          callback(new Error("请确认您的密码"))
+        }else if(!(value === this.ruleForm.newpass)){
+          callback(new Error("两次输入的密码不一致"))
+        }else{
+          callback()
+        }
+      }else{
+        if(!value){
+          callback(new Error("密码不能为空"))
+        }else{
+          callback()
+        }
       }
     };
     return {
@@ -63,14 +78,16 @@ export default {
 
         newpass: [
           {
-            validator: validatePass,
-            trigger: "blur"
+            required:true,
+            validator: validate_password,
+            trigger: ['blur','change']
           }
         ],
         checknewpass: [
           {
-            validator: validatePass2,
-            trigger: "blur"
+            required:true,
+            validator: validateConfirmpwd,
+            trigger: ['blur','change']
           }
         ]
       },

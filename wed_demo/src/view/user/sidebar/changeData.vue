@@ -1,7 +1,6 @@
 <template>
   <el-form class="baseform" ref="form" :model="form" label-width="80px">
-
-    <el-form-item label="昵 称" >
+    <el-form-item label="昵 称">
       <el-input class="name_input" v-model="form.username" placeholder></el-input>
     </el-form-item>
 
@@ -21,15 +20,9 @@
     </el-form-item>
 
     <el-form-item label="居住地">
-      <el-cascader
-        class="selectbo"
-        size="large"
-        :options="form.option1"
-        v-model="form.region"
-
-      ></el-cascader>
+      <el-cascader class="selectbo" size="large" :options="form.option1" v-model="form.region"></el-cascader>
     </el-form-item>
-        <!--@change="handleChange" -->
+    <!--@change="handleChange" -->
     <el-form-item label="QQ号">
       <el-input class="qq_input" v-model="form.QQ" placeholder="请输入qq号"></el-input>
     </el-form-item>
@@ -43,24 +36,34 @@
     </el-form-item>
 
     <el-form-item label="个人简介">
-      <el-input type="textarea" :rows="5" class="person_input" v-model="form.description" placeholder="介绍一下你自己吧"></el-input>
+      <el-input
+        type="textarea"
+        :rows="5"
+        class="person_input"
+        v-model="form.description"
+        placeholder="介绍一下你自己吧"
+      ></el-input>
     </el-form-item>
-
+    
     <el-form-item class="btn">
       <el-button class="button1" type="primary" round @click="submitForm('form')">提交</el-button>
     </el-form-item>
     <el-form-item class= "imgbox">
       <el-upload
         class="avatar-uploader"
-        action="https://jsonplaceholder.typicode.com/posts/"
         :show-file-list="false"
+        :auto-upload="false"
+        :on-change="imgSaveToUrl"
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload"
       >
+      <!-- <img v-show="imageUrl" :src="imageUrl" class="avatar" style="border-radius:20px ;border-radius:50%"/> -->
+      <!-- <i v-show="!imageUrl" class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;border-radius:20px;border-radius:50%"></i>  -->
         <img v-if="imageUrl" :src="imageUrl" class="avatar" style="border-radius:20px ;border-radius:50%"/>
         <i v-else class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;border-radius:20px;border-radius:50%"></i>
-      </el-upload>
+      </el-upload>  
     </el-form-item>
+    
   </el-form>
 </template>
 
@@ -74,13 +77,16 @@ import { provinceAndCityData, CodeToText } from "element-china-area-data";
 export default {
   data() {
     return {
-      imageUrl: '',
+      imageUrl:"",
+
+      //uid:"",
       form: {
         pickerOptions: {
           disabledDate(time) {
             return time.getTime() > Date.now();
           }
         },
+        user_id:"",
         date: "",
         username: "",
         gender: "",
@@ -103,15 +109,39 @@ export default {
         QQ: "",
         WeChat: "",
         phone: "",
-        description: ""
+        description: "",
+        img_base:""
       }
     };
   },
+  mounted:function () {
+    this.getUserData(this.form)
+    this.imageUrl="http://49.234.154.17:5555/avatars/"+this.form.user_id;
+    console.log(this.imageUrl);
+    
+    // this.form.username=form_data.name;
+    // this.form.gender=form_data.sex;
+    // this.form.data=form_data.birthday;
+    // this.form.region=form_data.location;
+    // this.form.QQ=form_data.qq;
+    // this.form.WeChat=form_data.wechat;
+    // this.form.phone=form_data.phone;
+    // this.form.description=form_data.description;
+    // console.log(this.form);
+  },
 
   methods: {
-    handleAvatarSuccess(res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw);
+    imgSaveToUrl(file){
+      this.imageUrl=URL.createObjectURL(file.raw);
+      let reader=new FileReader();
+      reader.readAsDataURL(file.raw);
+      reader.onloadend = (e)=>{
+        this.form.img_base=reader.result;
+      }
     },
+    // handleAvatarSuccess(res, file) {
+    //   this.imageUrl = URL.createObjectURL(file.raw);
+    // },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
       const isLt2M = file.size / 1024 / 1024 < 2;
@@ -124,26 +154,27 @@ export default {
       }
       return isJPG && isLt2M;
     },
-    submitForm(form) {
+  
+   submitForm(form) {
       var obj = {
         username: this.form.username,
         gender: this.form.gender,
         date: this.form.date,
-        region: this.form.region,
+        region: ""+this.form.region,
         QQ: this.form.QQ,
         WeChat: this.form.WeChat,
         phone: this.form.phone,
-        description: this.form.description
+        description: this.form.description,
+        img_base:this.form.img_base
       };
       var name = this.form.username;
       var sex = this.form.gender;
       var birthday = this.form.date;
-      var location = this.form.region;
+      var location = ""+this.form.region;
       var qq = this.form.QQ;
       var wechat = this.form.WeChat;
       var description = this.form.description;
-      console.log(obj)
-      console.log(obj.name)
+
       $.ajax({
         type: "post", // 提交方式
         url: "http://49.234.154.17:5555/user_modify_info.php",
@@ -160,9 +191,10 @@ export default {
               "sex": obj.gender,
               "birthday": obj.date,
               "location": obj.region,
-              "qq": obj. QQ,
+              "qq": obj.QQ,
               "wechat": obj.WeChat,
-              "description": obj.description
+              "description": obj.description,
+              "avatar":obj.img_base
           }
         },
         xhrFields: {
@@ -181,6 +213,48 @@ export default {
           }
         }
       });
+    },
+    getUserData(form){
+       $.ajax({
+        type: "post", // 提交方式
+        url: "http://49.234.154.17:5555/user_query.php",
+        data: {},
+        async: false,
+        xhrFields: {
+          withCredentials: true // 这里设置了withCredentials
+        },
+        dataType: "text",  // 服务器端返回的数据类型
+        success: function(data) {
+          var res=JSON.parse( data );
+          if (res.code == 200) {
+            form.username= res.user.name;
+            form.gender= res.user.sex;
+            form.date= res.user.birthday;
+            form.region= res.user.location.split(',');
+            form.QQ= res.user.qq;
+            form.WeChat= res.user.wechat;
+            form.phone= res.user.phone;
+            form.description= res.user.description;
+            form.user_id=res.user.uid;
+            // console.log(user_id)
+            // return user_id;
+            // this.imageUrl="http://49.234.154.17:5555/avatars/"+res.user.uid+".jpg";
+            // console.log(this.imageUrl);
+          } else {
+            alert("请求失败");
+          }
+        }
+      });
+      // this.imageUrl="http://49.234.154.17:5555/avatars/"+user_uid+".jpg";
+      // console.log(this.imageUrl);
+      // this.form.username=form_data.name;
+      // this.form.gender=form_data.sex;
+      // this.form.data=form_data.birthday;
+      // this.form.region=form_data.location;
+      // this.form.QQ=form_data.qq;
+      // this.form.WeChat=form_data.wechat;
+      // this.form.phone=form_data.phone;
+      // this.form.description=form_data.description;
     }
   }
 };
@@ -196,34 +270,34 @@ export default {
   margin-left: 50%;
   transform: translateX(-50%);
 }
-.imgbox{
+.imgbox {
   position: absolute;
   right: 150px;
-  top:50px;
+  top: 50px;
 }
 .el-upload__tip {
   line-height: 15px;
 }
 
-.name_input{
-  width:33%;
+.name_input {
+  width: 33%;
 }
 
 .qq_input {
-  width:78%;
+  width: 78%;
 }
 .wechat_input {
-  width:78%;
+  width: 78%;
 }
-.phone_input{
-  width:78%;
+.phone_input {
+  width: 78%;
 }
-.person_input{
-  width:78%;
+.person_input {
+  width: 78%;
 }
-.btn{
+.btn {
   margin-left: 50%;
-  transform:translateX(-50%);
+  transform: translateX(-50%);
 }
 /*
 .block111 {
@@ -245,14 +319,12 @@ div {
   padding-top: 24px;
   text-align: center;
   position: relative;
- 
 }
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
   cursor: pointer;
   overflow: hidden;
-  
 }
 .avatar-uploader .el-upload:hover {
   border-color: #409eff;

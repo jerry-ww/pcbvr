@@ -42,15 +42,6 @@ try {
 		throw new Exception('Failed query or no result when inserting');
 	}
 
-	$req = "UPDATE tag set replycount=replycount+1 where tid = '{$tid}'";
-
-	$res = $mysqli->query($req);
-	if ($res === FALSE) {
-		echo '{"code":4031}';
-		$done = TRUE;
-		throw new Exception('Failed query or no result when inserting');
-	}
-
 	echo '{"code":200}';
 	$done = TRUE;
 } catch (Throwable $e) {

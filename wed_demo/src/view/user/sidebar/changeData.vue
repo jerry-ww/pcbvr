@@ -17,7 +17,7 @@
     </el-form-item>
 
     <el-form-item label="生 日">
-      <el-date-picker class="selectbo" v-model="form.date" type="date" placeholder="选择日期"></el-date-picker>
+      <el-date-picker class="selectbo" v-model="form.date"  value-format="yyyy-MM-dd" type="date" placeholder="选择日期"></el-date-picker>
     </el-form-item>
 
     <el-form-item label="居住地">
@@ -107,6 +107,18 @@ export default {
       }
     };
   },
+  mounted:function () {
+    this.getUserData(this.form);
+    // this.form.username=form_data.name;
+    // this.form.gender=form_data.sex;
+    // this.form.data=form_data.birthday;
+    // this.form.region=form_data.location;
+    // this.form.QQ=form_data.qq;
+    // this.form.WeChat=form_data.wechat;
+    // this.form.phone=form_data.phone;
+    // this.form.description=form_data.description;
+    // console.log(this.form);
+  },
 
   methods: {
     handleAvatarSuccess(res, file) {
@@ -124,12 +136,48 @@ export default {
       }
       return isJPG && isLt2M;
     },
+
+    getUserData(form){
+       $.ajax({
+        type: "post", // 提交方式
+        url: "http://49.234.154.17:5555/user_query.php",
+        data: {},
+        xhrFields: {
+          withCredentials: true // 这里设置了withCredentials
+        },
+        dataType: "text",  // 服务器端返回的数据类型
+        success: function(data) {
+          var res=JSON.parse( data );
+          if (res.code == 200) {
+            form.username=    res.user.name;
+            form.gender=      res.user.sex;
+            form.date=        res.user.birthday;
+            form.region=     res.user.location.split(',');
+            form.QQ=          res.user.qq;
+            form.WeChat=      res.user.wechat;
+            form.phone=       res.user.phone;
+            form.description= res.user.description;
+          } else {
+            alert("请求失败");
+          }
+        }
+      });
+      
+      // this.form.username=form_data.name;
+      // this.form.gender=form_data.sex;
+      // this.form.data=form_data.birthday;
+      // this.form.region=form_data.location;
+      // this.form.QQ=form_data.qq;
+      // this.form.WeChat=form_data.wechat;
+      // this.form.phone=form_data.phone;
+      // this.form.description=form_data.description;
+    },
     submitForm(form) {
       var obj = {
         username: this.form.username,
         gender: this.form.gender,
         date: this.form.date,
-        region: this.form.region,
+        region: ""+this.form.region,
         QQ: this.form.QQ,
         WeChat: this.form.WeChat,
         phone: this.form.phone,
@@ -138,12 +186,13 @@ export default {
       var name = this.form.username;
       var sex = this.form.gender;
       var birthday = this.form.date;
-      var location = this.form.region;
+      var location = ""+this.form.region;
       var qq = this.form.QQ;
       var wechat = this.form.WeChat;
       var description = this.form.description;
       console.log(obj)
       console.log(obj.name)
+
       $.ajax({
         type: "post", // 提交方式
         url: "http://49.234.154.17:5555/user_modify_info.php",
@@ -160,7 +209,7 @@ export default {
               "sex": obj.gender,
               "birthday": obj.date,
               "location": obj.region,
-              "qq": obj. QQ,
+              "qq": obj.QQ,
               "wechat": obj.WeChat,
               "description": obj.description
           }
@@ -182,6 +231,9 @@ export default {
         }
       });
     }
+
+
+    
   }
 };
 </script>

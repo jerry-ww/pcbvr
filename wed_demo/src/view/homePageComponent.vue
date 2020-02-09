@@ -63,8 +63,8 @@ export default {
           // bgColor: '#6797a5'
         },
         {
-          img_src:require("../../static/build_one.jpg"),
-          title: "新一教学楼"
+          img_src:require("../../static/he.jpg"),
+          title: "合美术馆"
           // bgColor: '#6797a5'
         },
         {
@@ -73,42 +73,52 @@ export default {
           // bgColor: '#6797a5'
         },
         {
-          img_src: require("../../static/siyuan.jpg"),
-          title: "思源广场"
+          img_src: require("../../static/zzd.jpg"),
+          title: "张之洞博物馆"
           // bgColor: '#6797a5'
         }
       ],
 
       commands: [
         {
-          src: "http://49.234.154.17/potree-org/examples/Outer.html",
+          src: "http://49.234.154.17/potree-org/examples/outer.html",
           img_src: require("../../static/library.jpg"),
-          title: "图书馆外围"
-        },
-        {
-          src: "http://49.234.154.17/potree-org/examples/1f.html",
-          img_src: require("../../static/library.jpg"),
-          title: "图书馆一楼"
-        },
-        {
-          src: "http://49.234.154.17/potree-org/examples/2f.html",
-          img_src: require("../../static/library.jpg"),
-          title: "图书馆二楼"
-        },
-        {
-          src: "http://49.234.154.17/potree-org/examples/3f.html",
-          img_src:require("../../static/library.jpg"),
-          title: "图书馆三楼"
+          title: "图书馆"
         },
         {
           src: "http://49.234.154.17/potree-org/examples/4f.html",
-          img_src: require("../../static/library.jpg"),
-          title: "图书馆四楼"
+          img_src: require("../../static/siyuan.jpg"),
+          title: "思源广场"
+        },
+        {
+          src: "http://49.234.154.17/potree-org/examples/4f.html",
+          img_src:require("../../static/build_one.jpg"),
+          title: "新一教学楼"
+        },
+        {
+          src: "http://49.234.154.17/potree-org/examples/4f.html",
+          img_src: require("../../static/house.jpg"),
+          title: "飞马广场"
+        },
+        {
+          src: "http://49.234.154.17/potree-org/examples/1f.html",
+          img_src: require("../../static/hm.jpg"),
+          title: "湖北省美术馆"
+        },
+        {
+          src: "http://49.234.154.17/potree-org/examples/2f.html",
+          img_src: require("../../static/hhl.jpg"),
+          title: "黄鹤楼"
+        },
+        {
+          src: "http://49.234.154.17/potree-org/examples/3f.html",
+          img_src:require("../../static/he.jpg"),
+          title: "合美术馆"
         },
         {
           src: "http://49.234.154.17/potree-org/examples/5f.html",
-          img_src: require("../../static/library.jpg"),
-          title: "图书馆五楼"
+          img_src: require("../../static/zzd.jpg"),
+          title: "张之洞博物馆"
         }
       ],
       latests: [
@@ -311,3 +321,5 @@ li {
   line-height: 19px;
 }
 </style>
+
+

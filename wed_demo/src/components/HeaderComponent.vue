@@ -92,7 +92,7 @@
                     <a href="#" class="btn" id="cancel" @click="close_registerpop()" >取消</a>
                     <a href="#" class="btn ok" @click="register()">注册</a>
                 </div>
-        </div>
+       		</div>
       </div>
   </div>
 </template>
@@ -181,6 +181,9 @@ export default {
                 type: "post",    // 提交方式
                 data: {"email":user_num,"password":pwd}, // data为String类型，必须为 Key/Value 格式。
                 dataType: "json",    // 服务器端返回的数据类型
+                xhrFields: {
+                    withCredentials: true// 这里设置了withCredentials
+                },
                 success: function (data) {    
                     console.log(data);
                     if (data.code == 200) {
@@ -195,33 +198,32 @@ export default {
         }
     },
     logout(){
-        alert("退出成功");
-        document.getElementById("log_btn").style.display = "inline-block";
-        document.getElementById("logged").style.display = "none";
-        let url=window.location.href;
-        let url_end=url.lastIndexOf('/');
-        let new_url=url.substr(0,url_end);
+        $.ajax({
+            url: "http://49.234.154.17:5555/logout.php",//填一下登录接口就好了
+            type: "post",    // 提交方式
+            data: {}, // data为String类型，必须为 Key/Value 格式。
+            dataType: "json",    // 服务器端返回的数据类型
+            xhrFields: {
+                withCredentials: true// 这里设置了withCredentials
+            },
+            success: function (data) {    
+                console.log(data);
+                if (data.code == 200) {
+                    alert("退出成功");
+                    document.getElementById("log_btn").style.display = "inline-block";
+                    document.getElementById("logged").style.display = "none";
+                    let url=window.location.href;
+                    let url_end=url.lastIndexOf('/');
+                    let new_url=url.substr(0,url_end);
 
-        // history.pushState("", "Title", new_url+"/homePageComponent");
-        window.location.href=new_url+"/homePageComponent";
-
-        // $.ajax({
-        //     url: "http://49.234.154.17:5555/logout.php",//填一下登录接口就好了
-        //     type: "post",    // 提交方式
-        //     data: {"email":user_num,"password":pwd}, // data为String类型，必须为 Key/Value 格式。
-        //     dataType: "json",    // 服务器端返回的数据类型
-        //     success: function (data) {    
-        //         console.log(data);
-        //         if (data.code == 200) {
-        //             alert("退出成功");
-        //             document.getElementById("log_btn").style.display = "block";
-        //             document.getElementById("logged").style.display = "none";
-        //         }
-        //         else{
-        //             alert("退出失败");
-        //         }
-        //     },
-        // });
+                    // history.pushState("", "Title", new_url+"/homePageComponent");
+                    window.location.href=new_url+"/homePageComponent";
+                }
+                else{
+                    alert("退出失败");
+                }
+            },
+        });
     }
   }
 }
@@ -434,8 +436,8 @@ a{
 }
 .poptop{
     width: 100%;
-    height: 120px;
-    line-height: 120px;
+    height: 50px;
+    line-height: 30px;
     text-align: center;
     border-bottom: 1px solid #F2F2F2;
     position: relative;

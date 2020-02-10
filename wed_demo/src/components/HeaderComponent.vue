@@ -152,6 +152,7 @@ export default {
                         document.getElementById("logged").style.display = "block";
                         document.getElementById("user_name").innerHTML="欢迎"+user_num;
                         localStorage.setItem("username",user_num);
+                        localStorage.setItem("user_avatar",data.user.avatar);
                         // close_logpop();
                     }
                     else{

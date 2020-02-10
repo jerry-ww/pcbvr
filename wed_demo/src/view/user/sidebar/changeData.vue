@@ -52,15 +52,22 @@
     <el-form-item class= "imgbox">
       <el-upload
         class="avatar-uploader"
-        action="https://jsonplaceholder.typicode.com/posts/"
+        ref="upload"
+        :auto-upload="false"
+        :multiple="flase"
+        action="/iconupload"
         :show-file-list="false"
+        :on-change="imgSaveToUrl"
         :on-success="handleAvatarSuccess"
         :before-upload="beforeAvatarUpload"
       >
         <img v-if="imageUrl" :src="imageUrl" class="avatar" style="border-radius:20px ;border-radius:50%"/>
         <i v-else class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;border-radius:20px;border-radius:50%"></i>
+        <el-button class="button_save" type="primary" round @click="submitImg()">保存</el-button>
       </el-upload>
+      
     </el-form-item>
+
   </el-form>
 </template>
 
@@ -74,7 +81,8 @@ import { provinceAndCityData, CodeToText } from "element-china-area-data";
 export default {
   data() {
     return {
-      imageUrl: '',
+      imageUrl:'',
+      localFile:{},
       form: {
         pickerOptions: {
           disabledDate(time) {
@@ -109,6 +117,7 @@ export default {
   },
   mounted:function () {
     this.getUserData(this.form);
+    this.imageUrl=localStorage.getItem('user_avatar');
     // this.form.username=form_data.name;
     // this.form.gender=form_data.sex;
     // this.form.data=form_data.birthday;
@@ -121,8 +130,7 @@ export default {
   },
 
   methods: {
-    handleAvatarSuccess(res, file) {
-      this.imageUrl = URL.createObjectURL(file.raw);
+    handleAvatarSuccess(res) {
     },
     beforeAvatarUpload(file) {
       const isJPG = file.type === "image/jpeg";
@@ -136,8 +144,17 @@ export default {
       }
       return isJPG && isLt2M;
     },
-
+    imgSaveToUrl(file){
+      this.imageUrl=URL.createObjectURL(file.raw);
+      this.localFile = file.raw;
+      let reader = new FileReader();
+      reader.readAsDataURL(this.localFile);
+      reader.onload=()=>{
+        this.localFile =reader.result;
+      }
+    },
     getUserData(form){
+       
        $.ajax({
         type: "post", // 提交方式
         url: "http://49.234.154.17:5555/user_query.php",
@@ -157,6 +174,7 @@ export default {
             form.WeChat=      res.user.wechat;
             form.phone=       res.user.phone;
             form.description= res.user.description;
+            // me.imageUrl="http://49.234.154.17:5555/"+res.user.avatar;
           } else {
             alert("请求失败");
           }
@@ -192,7 +210,7 @@ export default {
       var description = this.form.description;
       console.log(obj)
       console.log(obj.name)
-
+      
       $.ajax({
         type: "post", // 提交方式
         url: "http://49.234.154.17:5555/user_modify_info.php",
@@ -230,10 +248,34 @@ export default {
           }
         }
       });
+    },
+    submitImg() {
+      if(this.imageData===''){
+        alert("请选择图片");
+      }
+
+      $.ajax({
+        type: "post", // 提交方式
+        url: "http://49.234.154.17:5555/avatar_upload.php",
+        data: {
+          "imgData": this.localFile
+        },
+        xhrFields: {
+          withCredentials: true // 这里设置了withCredentials
+        },
+        dataType: "text", // 服务器端返回的数据类型
+        success: function(data) {
+          var res = JSON.parse(data);
+          // console.log(data);
+          if (res.code == 200) {
+            alert("上传成功");
+            // close_logpop();
+          } else {
+            alert("上传失败");
+          }
+        }
+      });
     }
-
-
-    
   }
 };
 </script>
@@ -250,8 +292,9 @@ export default {
 }
 .imgbox{
   position: absolute;
-  right: 150px;
-  top:50px;
+  right:30%;
+  width:30%;
+  top:0px;
 }
 .el-upload__tip {
   line-height: 15px;
@@ -277,8 +320,8 @@ export default {
   margin-left: 50%;
   transform:translateX(-50%);
 }
-/*
-.block111 {
+
+/* .block111 {
   width: 400px;
   padding-top: 20px;
   margin-right: 20px;
@@ -286,8 +329,8 @@ export default {
 }
 div {
   display: block;
-}
-*/
+} */
+
 .picture {
   height: 180px;
   width: 180px;
@@ -321,5 +364,13 @@ div {
   width: 178px;
   height: 178px;
   display: block;
+}
+
+.botton_save{
+  margin-top:5%;
+  margin-left:50%;
+  transform: translateX(-50%);
+  left:10%;
+  position:absolute;
 }
 </style>

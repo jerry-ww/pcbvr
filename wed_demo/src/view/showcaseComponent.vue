@@ -45,8 +45,8 @@
                 <a :href="item.url" class="products-border">
                   <img :src="item.img_src" alt />
                 </a>
-                <strong>{{item.classfication}}</strong>
-                <p>{{item.name}}</p>
+                <strong>{{item.name}}</strong>
+                <p>{{item.classfication}}</p>
                 <p>
                   <a :href="item.detail_url" class="products-aniu">
                     了解更多
@@ -108,46 +108,72 @@ export default {
         {
           url: "https://www.baidu.com",
           img_src:
-            // "http://101.132.40.201:8080/Myhouse1/picture/%E5%9B%BE%E4%B9%A6%E9%A6%86%E4%BE%A7%E9%9D%A2.jpg",
             require("../../static/library.jpg"),
-          classfication: "图书馆",
-          name: "校园",
+          classfication: "校园",
+          name: "武汉理工大学南湖图书馆",
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         },
         {
           url: "https://www.baidu.com",
           img_src:
-            require("../../static/library.jpg"),
-          classfication: "图书馆",
-          name: "校园",
+            require("../../static/hhl.jpg"),
+          classfication: "景区",
+          name: "黄鹤楼",
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         },
         {
           url: "https://www.baidu.com",
           img_src:
-            require("../../static/library.jpg"),
-          classfication: "图书馆",
-          name: "校园",
+            require("../../static/he.jpg"),
+          classfication: "景区",
+          name: "合美术馆",
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         },
         {
           url: "https://www.baidu.com",
           img_src:
-            require("../../static/library.jpg"),
-          classfication: "图书馆",
-          name: "校园",
+            require("../../static/hm.jpg"),
+          classfication: "景区",
+          name: "湖北省美术馆",
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         },
         {
           url: "https://www.baidu.com",
           img_src:
-           require("../../static/library.jpg"),
-          classfication: "图书馆",
-          name: "校园",
+           require("../../static/zzd.jpg"),
+          classfication: "景区",
+          name: "张之洞博物馆",
+          detail_url:
+            "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+        },
+         {
+          url: "https://www.baidu.com",
+          img_src:
+           require("../../static/build_one.jpg"),
+          classfication: "校园",
+          name: "武汉理工大学博学主楼",
+          detail_url:
+            "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+        },
+         {
+          url: "https://www.baidu.com",
+          img_src:
+           require("../../static/hk.jpg"),
+          classfication: "景区",
+          name: "汉口江滩",
+          detail_url:
+            "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
+        },
+         {
+          url: "https://www.baidu.com",
+          img_src:
+           require("../../static/siyuan.jpg"),
+          classfication: "校园",
+          name: "武汉理工大学思源广场",
           detail_url:
             "https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-2634161568.20.jpN6qf&id=523353236389"
         }
@@ -155,19 +181,19 @@ export default {
       latests:[
         {
           src:" ",
-          name:"武汉理工"
+          name:"武汉理工大学"
         },
         {
           src:" ",
-          name:"华中科技"
+          name:"张之洞博物馆"
         },
         {
           src:" ",
-          name:"华中师范"
+          name:"湖北省美术馆"
         },
         {
           src:" ",
-          name:"中南财大"
+          name:"黄鹤楼"
         }
         
       ],
@@ -178,11 +204,11 @@ export default {
         },
         {
           src:"",
-          name:"晴川阁"
+          name:"合美术馆"
         },
         {
           src:"",
-          name:"长江大桥"
+          name:"张之洞博物馆"
         },
       ]
     };

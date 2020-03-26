@@ -31,8 +31,8 @@
                 <a href>
                   <img :src="item.img_url" alt />
                 </a>
-                <span>{{item.date}}</span>
-                <p>{{item.title}}</p>
+                <strong>{{item.title}}</strong>
+                <p>{{item.creator}}:{{item.date}}</p>
                 <p>
                   <a href>了解详情</a>
                 </p>
@@ -108,37 +108,50 @@ export default {
         {
           url: "",
           img_url:
-            require("../../static/library.jpg"),
-          date: "[ 2017-06-11 ]",
-          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
+            require("../../static/vr_news1.jpeg"),
+          date: "[2020-02-26]",
+          creator:"萌科MK",
+          title: "VR教育优势，让虚拟照进现实"
         },
         {
           url: "",
           img_url:
-            require("../../static/library.jpg"),
-          date: "[ 2017-06-11 ]",
-          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
+            require("../../static/vr_news6.jpeg"),
+          date: "[2019-05-12]",
+          creator:"中关村在线",
+          title: "VR已死？一组数据告诉你，不存在的！"
         },
         {
           url: "",
           img_url:
-            require("../../static/library.jpg"),
-          date: "[ 2017-06-11 ]",
-          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
+            require("../../static/vr_news3.png"),
+          date: "[2019-03-10]",
+          creator:"新浪VR",
+          title: "为什么5G对VR比想象更重要"
         },
         {
           url: "",
           img_url:
-            require("../../static/library.jpg"),
-          date: "[ 2017-06-11 ]",
-          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
+            require("../../static/vr_news2.jpeg"),
+          date: "[2020-02-25]",
+          creator:"科技章鱼烧",
+          title: "轻薄才是VR真潮流，HUAWEI VR Glass上手体验"
         },
         {
           url: "",
           img_url:
-            require("../../static/library.jpg"),
-          date: "[ 2017-06-11 ]",
-          title: "VR全景漫游展示为世界文化遗产推广提供新思路"
+            require("../../static/vr_news4.jpg"),
+          date: "[2019-02-14]",
+          creator:"深响",
+          title: "半年收入超千万，AR落地应有时|专访网易人工智能事业部总经理李晓燕"
+        },
+        {
+          url: "",
+          img_url:
+            require("../../static/vr_news5.jpg"),
+          date: "[2019-06-28]",
+          creator:"深响",
+          title: "从图文到互动影视：1-5G技术搅动下的娱乐跃进史 "
         }
       ]
     };

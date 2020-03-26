@@ -437,8 +437,8 @@ a{
 }
 .poptop{
     width: 100%;
-    height: 50px;
-    line-height: 30px;
+    height: 80px;
+    line-height: 70px;
     text-align: center;
     border-bottom: 1px solid #F2F2F2;
     position: relative;

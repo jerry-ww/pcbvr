@@ -63,7 +63,7 @@
       >
         <img v-if="imageUrl" :src="imageUrl" class="avatar" style="border-radius:20px ;border-radius:50%"/>
         <i v-else class="el-icon-plus avatar-uploader-icon" style="background-color: #efefef;border-radius:20px;border-radius:50%"></i>
-        <el-button class="button_save" type="primary" round @click="submitImg()">保存</el-button>
+        <el-button class="button_save" type="primary" style="margin-top: 5%" round @click="submitImg()">保存</el-button>
       </el-upload>
       
     </el-form-item>

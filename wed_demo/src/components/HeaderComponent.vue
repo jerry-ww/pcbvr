@@ -315,7 +315,7 @@ a {
 }
 .h-controller .h-search i{
   position: absolute;
-  left: 6px;
+  right: 15px;
   top:6px;
   font-size:18px;
   color: #bbbbbb;

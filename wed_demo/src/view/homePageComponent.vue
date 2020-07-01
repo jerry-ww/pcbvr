@@ -59,7 +59,7 @@ export default {
         {
           img_src:require("../../static/library.jpg"),
           title: "南湖图书馆",
-          url: "http://101.132.40.201:8080/Myhouse1/pageName.html"
+          //url: "http://49.234.154.17/potree-org/examples/1f.html"
           // bgColor: '#6797a5'
         },
         {
@@ -81,49 +81,49 @@ export default {
 
       commands: [
         {
-          src: "http://49.234.154.17/potree-org/examples/outer.html",
+          src: "http://49.234.154.17/potree-org/examples/1f.html",
           img_src: require("../../static/library.jpg"),
-          title: "图书馆"
+          title: "南湖图书馆"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/4f.html",
+          src: "#",
           img_src: require("../../static/siyuan.jpg"),
           title: "思源广场"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/4f.html",
+          src: "#",
           img_src:require("../../static/build_one.jpg"),
           title: "新一教学楼"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/4f.html",
+          src: "#",
           img_src: require("../../static/house.jpg"),
           title: "飞马广场"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/1f.html",
-          img_src: require("../../static/hm.jpg"),
-          title: "湖北省美术馆"
-        },
-        {
-          src: "http://49.234.154.17/potree-org/examples/2f.html",
+          src: "#",
           img_src: require("../../static/hhl.jpg"),
           title: "黄鹤楼"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/3f.html",
+          src: "#",
+          img_src: require("../../static/hm.jpg"),
+          title: "湖北省美术馆"
+        },
+        {
+          src: "#",
           img_src:require("../../static/he.jpg"),
           title: "合美术馆"
         },
         {
-          src: "http://49.234.154.17/potree-org/examples/5f.html",
+          src: "#",
           img_src: require("../../static/zzd.jpg"),
           title: "张之洞博物馆"
         }
       ],
       latests: [
         {
-          src: "http://101.132.40.201:8080/Myhouse1/pageName.html",
+          src: "#",
           img_src: require("../../static/build_one.jpg"),
           title: "新一教学楼"
         }

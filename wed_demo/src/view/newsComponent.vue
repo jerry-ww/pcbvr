@@ -48,7 +48,7 @@
                 <li>
                   <a href="news.html" style="background:#ccc;">1</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href>2</a>
                 </li>
                 <li>
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#">...</a>
-                </li>
+                </li> -->
                 <li>
                   <a href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
@@ -98,7 +98,6 @@
 <script src="../js/jquery-1.8.3.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="../plug/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
-<!--自己写的js-->
 <script src="../js/main.min.js"></script>
 <script>
 export default {

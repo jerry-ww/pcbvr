@@ -14,7 +14,7 @@
           </div>
           <div class="h-search">
             <input type="text" id="search" value="校园/景点/车站" onFocus="if(value=='校园/景点/车站') {value=''}" onBlur="if(value==''){value='校园/景点/车站'}">
-            <i class="fa fa-search"></i>
+            <i class="fa fa-search" @click="head_search()"></i>
           </div>
           <div class="h-login" >
               <button id="log_btn" class="login" @click="show_logpop()">登录</button>
@@ -120,6 +120,35 @@ export default {
             }
         }
         this.layout.changeColor = arr;
+    },
+    head_search(){
+        let search_text=$('#search').val();
+        var me=this;
+        if(search_text!="校园/景点/车站"){
+            $.ajax({
+                url: "http://49.234.154.17:5555/model_search.php",//填一下登录接口就好了
+                type: "post",    // 提交方式
+                data: {"search_text":search_text},  // data为String类型，必须为 Key/Value 格式。
+                dataType: "json",    // 服务器端返回的数据类型
+                xhrFields: {
+                    withCredentials: true // 这里设置了withCredentials
+                },
+                success: function (data) {    
+                    // console.log(data);
+                    if (data.code == 200) {
+                        me.$router.push('showcaseComponent');
+                        var str_jsonData = JSON.stringify(data.products);
+                        localStorage.setItem("products",str_jsonData);
+                        // me.$router.push({
+                        //     name: 'showcaseComponent',
+                        //     params: {
+                        //         products:data.products
+                        //     }
+                        // })
+                    }
+                },
+            });
+        }
     },
     // 登录窗口弹出
     show_logpop(){
@@ -229,7 +258,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 @import "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 a {

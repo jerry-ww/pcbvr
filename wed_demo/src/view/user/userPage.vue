@@ -6,7 +6,7 @@
                 <div>
                     <el-menu default-active="1" class="el-menu-vertical-demo" style="min-height:900px" @select="handleSelect">
                       <el-menu-item index="1"><i class="el-icon-message"></i>基本信息</el-menu-item>
-                      <el-menu-item index="2"><i class="el-icon-menu"></i>个人主页</el-menu-item>
+                      <el-menu-item index="2"><i class="el-icon-menu"></i>与我相关</el-menu-item>
                       <el-menu-item index="3"><i class="el-icon-setting"></i>修改密码</el-menu-item>
                     </el-menu>
                 </div>
